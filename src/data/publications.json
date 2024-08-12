@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Lorem ipsum",
+    "authors": "David Sarrat González, Lorem ipsum",
+    "venue": "Lorem ipsum",
+    "year": "2022",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "title": "Lorem ipsum",
+    "authors": "David Sarrat González, Lorem ipsum",
+    "venue": "Lorem ipsum",
+    "year": "2021",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]

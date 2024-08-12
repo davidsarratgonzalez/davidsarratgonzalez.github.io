@@ -1,0 +1,16 @@
+[
+  {
+    "degree": "Lorem ipsum",
+    "university": "Lorem ipsum",
+    "startDate": "Sep 2016",
+    "endDate": "Jun 2018",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "degree": "Lorem ipsum",
+    "university": "Lorem ipsum",
+    "startDate": "Sep 2012",
+    "endDate": "Jun 2016",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]
