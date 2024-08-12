@@ -11,9 +11,18 @@ function Experience() {
       <h2>Work Experience</h2>
       {experienceData.map((job, index) => (
         <div className="job" key={index}>
-          <h3>{job.jobTitle}</h3>
-          <p>{job.company} | {formatDate(job.startDate, job.endDate)}</p>
-          {job.description && <p>{job.description}</p>}
+          {job.logo && (
+            <img
+              src={`/images/${job.logo}`}
+              alt={`${job.company} logo`}
+              className="company-logo"
+            />
+          )}
+          <div>
+            <h3>{job.jobTitle}</h3>
+            <p>{job.company} | {formatDate(job.startDate, job.endDate)}</p>
+            {job.description && <p>{job.description}</p>}
+          </div>
         </div>
       ))}
     </section>

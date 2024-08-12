@@ -4,13 +4,15 @@
     "university": "Lorem ipsum",
     "startDate": "Sep 2016",
     "endDate": "Jun 2018",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "logo": "uoc.jpeg"
   },
   {
     "degree": "Lorem ipsum",
     "university": "Lorem ipsum",
     "startDate": "Sep 2012",
     "endDate": "Jun 2016",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "logo": "udl.jpeg"
   }
 ]

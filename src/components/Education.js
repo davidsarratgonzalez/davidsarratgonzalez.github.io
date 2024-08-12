@@ -11,10 +11,19 @@ function Education() {
       <h2>Education</h2>
       {educationData.map((edu, index) => (
         <div className="education-entry" key={index}>
-          <h3>{edu.degree}</h3>
-          <p>{edu.university}</p>
-          <p>{formatDate(edu.startDate, edu.endDate)}</p>
-          {edu.description && <p>{edu.description}</p>}
+          {edu.logo && (
+            <img
+              src={`/images/${edu.logo}`}
+              alt={`${edu.university} logo`}
+              className="education-logo"
+            />
+          )}
+          <div>
+            <h3>{edu.degree}</h3>
+            <p>{edu.university}</p>
+            <p>{formatDate(edu.startDate, edu.endDate)}</p>
+            {edu.description && <p>{edu.description}</p>}
+          </div>
         </div>
       ))}
     </section>
