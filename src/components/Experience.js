@@ -2,27 +2,24 @@ import React from 'react';
 import experienceData from '../data/experience.json';
 
 function Experience() {
-  const formatDate = (startDate, endDate) => {
-    return `${startDate} - ${endDate || 'Present'}`;
-  };
-
   return (
     <section id="experience">
       <h2>Work Experience</h2>
       {experienceData.map((job, index) => (
-        <div className="job" key={index}>
+        <div className="entry" key={index}>
           {job.logo && (
             <img
               src={`/images/${job.logo}`}
               alt={`${job.company} logo`}
-              className="company-logo"
+              className="entry-logo"
             />
           )}
-          <div>
-            <h3>{job.jobTitle}</h3>
-            <p>{job.company} | {formatDate(job.startDate, job.endDate)}</p>
-            {job.description && <p>{job.description}</p>}
+          <div className="entry-content">
+            <h3 className="entry-title">{job.jobTitle}</h3>
+            <p className="entry-subtitle">{job.company}</p>
+            {job.description && <p className="entry-description">{job.description}</p>}
           </div>
+          <span className="entry-date">{job.startDate} - {job.endDate || 'Present'}</span>
         </div>
       ))}
     </section>

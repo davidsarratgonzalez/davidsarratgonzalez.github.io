@@ -2,28 +2,24 @@ import React from 'react';
 import educationData from '../data/education.json';
 
 function Education() {
-  const formatDate = (startDate, endDate) => {
-    return `${startDate} - ${endDate || 'Present'}`;
-  };
-
   return (
     <section id="education">
       <h2>Education</h2>
       {educationData.map((edu, index) => (
-        <div className="education-entry" key={index}>
+        <div className="entry" key={index}>
           {edu.logo && (
             <img
               src={`/images/${edu.logo}`}
               alt={`${edu.university} logo`}
-              className="education-logo"
+              className="entry-logo"
             />
           )}
-          <div>
-            <h3>{`${edu.degree} in ${edu.fieldOfStudy}`}</h3>
-            <p>{edu.university}</p>
-            <p>{formatDate(edu.startDate, edu.endDate)}</p>
-            {edu.description && <p>{edu.description}</p>}
+          <div className="entry-content">
+            <h3 className="entry-title">{`${edu.degree} in ${edu.fieldOfStudy}`}</h3>
+            <p className="entry-subtitle">{edu.university}</p>
+            {edu.description && <p className="entry-description">{edu.description}</p>}
           </div>
+          <span className="entry-date">{edu.startDate} - {edu.endDate || 'Present'}</span>
         </div>
       ))}
     </section>
