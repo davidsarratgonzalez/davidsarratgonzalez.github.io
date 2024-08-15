@@ -74,6 +74,31 @@ ul {
   margin-right: 20px;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0073b1; /* LinkedIn color */
+}
+
+.social-icons a:nth-child(2):hover {
+  color: #333; /* GitHub color */
+}
+
+.social-icons a:nth-child(3):hover {
+  color: #A6CE39; /* ORCID color */
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
