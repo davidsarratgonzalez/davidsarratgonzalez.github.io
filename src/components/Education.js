@@ -19,7 +19,7 @@ function Education() {
             />
           )}
           <div>
-            <h3>{edu.degree}</h3>
+            <h3>{`${edu.degree} in ${edu.fieldOfStudy}`}</h3>
             <p>{edu.university}</p>
             <p>{formatDate(edu.startDate, edu.endDate)}</p>
             {edu.description && <p>{edu.description}</p>}

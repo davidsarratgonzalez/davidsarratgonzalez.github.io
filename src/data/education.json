@@ -1,18 +1,18 @@
 [
   {
-    "degree": "Lorem ipsum",
+    "degree": "Master's degree",
+    "fieldOfStudy": "Computer Science",
     "university": "Lorem ipsum",
     "startDate": "Sep 2016",
     "endDate": "Jun 2018",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "logo": "uoc.jpeg"
   },
   {
-    "degree": "Lorem ipsum",
+    "degree": "Bachelor's degree",
+    "fieldOfStudy": "Information Technology",
     "university": "Lorem ipsum",
     "startDate": "Sep 2012",
     "endDate": "Jun 2016",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "logo": "udl.jpeg"
   }
 ]
