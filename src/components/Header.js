@@ -22,16 +22,16 @@ function Header() {
         <div className="social-links-container">
           <div className="social-links">
             <a href="https://www.linkedin.com/in/davidsarratgonzalez" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i> /in/davidsarratgonzalez
+              <i className="fab fa-linkedin"></i> <span>/in/davidsarratgonzalez</span>
             </a>
             <a href="https://github.com/davidsarratgonzalez" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github"></i> /davidsarratgonzalez
+              <i className="fab fa-github"></i> <span>/davidsarratgonzalez</span>
             </a>
             <a href="https://orcid.org/0000-0002-9064-3303" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-orcid"></i> 0000-0002-9064-3303
+              <i className="fab fa-orcid"></i> <span>0000-0002-9064-3303</span>
             </a>
             <a href="https://davidsarratgonzalez.github.io" target="_blank" rel="noopener noreferrer">
-              <i className="fas fa-globe"></i> davidsarratgonzalez.github.io
+              <i className="fas fa-globe"></i> <span>davidsarratgonzalez.github.io</span>
             </a>
           </div>
         </div>
