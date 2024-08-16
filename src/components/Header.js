@@ -21,21 +21,31 @@ function Header() {
       <div className="header-right">
         <div className="social-links-container">
           <div className="social-links">
-            <a href="https://www.linkedin.com/in/davidsarratgonzalez" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i> <span>/in/davidsarratgonzalez</span>
-            </a>
-            <a href="https://github.com/davidsarratgonzalez" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github"></i> <span>/davidsarratgonzalez</span>
-            </a>
-            <a href="https://orcid.org/0000-0002-9064-3303" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-orcid"></i> <span>0000-0002-9064-3303</span>
-            </a>
-            <a href="https://davidsarratgonzalez.github.io" target="_blank" rel="noopener noreferrer">
-              <i className="fas fa-globe"></i> <span>davidsarratgonzalez.github.io</span>
-            </a>
-            <a href="mailto:sarrat@protonmail.com" target="_blank" rel="noopener noreferrer">
-              <i className="fas fa-envelope"></i> <span>sarrat@protonmail.com</span>
-            </a>
+            {aboutData.linkedin && (
+              <a href={`https://www.linkedin.com/in/${aboutData.linkedin}`} target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin"></i> <span>/in/{aboutData.linkedin}</span>
+              </a>
+            )}
+            {aboutData.github && (
+              <a href={`https://github.com/${aboutData.github}`} target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github"></i> <span>/{aboutData.github}</span>
+              </a>
+            )}
+            {aboutData.orcid && (
+              <a href={`https://orcid.org/${aboutData.orcid}`} target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-orcid"></i> <span>{aboutData.orcid}</span>
+              </a>
+            )}
+            {aboutData.website && (
+              <a href={aboutData.website} target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-globe"></i> <span>{aboutData.website.replace(/^https?:\/\//, '')}</span>
+              </a>
+            )}
+            {aboutData.email && (
+              <a href={`mailto:${aboutData.email}`} target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-envelope"></i> <span>{aboutData.email}</span>
+              </a>
+            )}
           </div>
         </div>
       </div>

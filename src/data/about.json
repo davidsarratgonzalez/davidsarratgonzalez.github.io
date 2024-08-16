@@ -1,5 +1,10 @@
 {
   "name": "David Sarrat González",
   "title": "Bioinformatician",
-  "profileImage": "david.jpeg"
+  "profileImage": "david.jpeg",
+  "website": "https://davidsarratgonzalez.github.io",
+  "email": "sarrat@protonmail.com",
+  "linkedin": "davidsarratgonzalez",
+  "github": "davidsarratgonzalez",
+  "orcid": "0000-0002-9064-3303"
 }
