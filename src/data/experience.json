@@ -1,15 +1,26 @@
 [
   {
-    "jobTitle": "Lorem ipsum",
+    "jobTitle": "Doctoral Researcher",
     "company": "Barcelona Institute for Global Health (ISGlobal)",
-    "startDate": "Jan 2020",
+    "startDate": "Sep 2022",
+    "endDate": "Present",
+    "description": "",
     "logo": "isglobal.jpeg"
   },
   {
-    "jobTitle": "Lorem ipsum",
-    "company": "Lorem ipsum",
-    "startDate": "Jun 2018",
-    "endDate": "Dec 2019",
+    "jobTitle": "Associate Professor",
+    "company": "Universitat de Lleida",
+    "startDate": "Sep 2020",
+    "endDate": "Present",
+    "description": "Taught Algorithms and Complexity, Distributed Computing and Web Project courses within the Computer Engineering program. Supervised 5 bachelor's and 1 master's theses in the same discipline.",
+    "logo": "udl.jpeg"
+  },
+  {
+    "jobTitle": "Research Assistant",
+    "company": "Universitat de Lleida",
+    "startDate": "Jun 2020",
+    "endDate": "Sep 2020",
+    "description": "",
     "logo": "udl.jpeg"
   }
 ]

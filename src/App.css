@@ -114,6 +114,48 @@ h2 {
   white-space: nowrap;
 }
 
+/* Publications Styles */
+#publications .entry {
+  display: flex;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#publications .entry-content {
+  flex-grow: 1;
+}
+
+#publications .entry-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#publications .entry-subtitle {
+  margin: 1px 0;
+  font-size: 14px;
+}
+
+#publications .entry-description {
+  margin: 1px 0;
+  font-size: 14px;
+}
+
+#publications .entry-date {
+  text-align: right;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+#publications .entry-description a {
+  color: #000;
+  text-decoration: none;
+}
+
+#publications .entry-description a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .App {

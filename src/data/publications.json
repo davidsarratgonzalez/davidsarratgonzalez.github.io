@@ -1,17 +1,14 @@
 [
   {
-    "title": "Lorem ipsum",
-    "authors": "David Sarrat González, Lorem ipsum",
-    "venue": "Lorem ipsum",
-    "year": "2022",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "doi": "10.1123/ijspp.2023-0184"
-  },
-  {
-    "title": "Lorem ipsum",
-    "authors": "David Sarrat González, Lorem ipsum",
-    "venue": "Lorem ipsum",
-    "year": "2021",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "authors": "González JR, Cáceres A, Ferrer E, Balagué-Dobón L, Escribà-Montagut X, Sarrat-González D, Quintás G, Rodas G.",
+    "month": "May",
+    "year": "2024",
+    "title": "Predicting Injuries in Elite Female Football Players With Global-Positioning-System and Multiomics Data",
+    "journal": "Int J Sports Physiol Perform",
+    "volume": "19",
+    "issue": "7",
+    "pages": "661-669",
+    "doi": "10.1123/ijspp.2023-0184",
+    "pmid": "38753297"
   }
 ]
