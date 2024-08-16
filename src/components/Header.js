@@ -30,6 +30,9 @@ function Header() {
             <a href="https://orcid.org/0000-0002-9064-3303" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-orcid"></i> 0000-0002-9064-3303
             </a>
+            <a href="https://davidsarratgonzalez.github.io" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-globe"></i> davidsarratgonzalez.github.io
+            </a>
           </div>
         </div>
       </div>
