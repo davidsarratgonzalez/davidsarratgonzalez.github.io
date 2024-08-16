@@ -13,7 +13,7 @@ function Projects() {
             {project.technologies && <p className="entry-subtitle">Technologies: {project.technologies}</p>}
             {project.link && (
               <p className="entry-description">
-                <strong>Link:</strong> <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link.replace(/^https?:\/\//, '')}</a>
+                <strong>Website:</strong> <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link.replace(/^https?:\/\//, '')}</a>
               </p>
             )}
           </div>
