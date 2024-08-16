@@ -33,6 +33,9 @@ function Header() {
             <a href="https://davidsarratgonzalez.github.io" target="_blank" rel="noopener noreferrer">
               <i className="fas fa-globe"></i> <span>davidsarratgonzalez.github.io</span>
             </a>
+            <a href="mailto:sarrat@protonmail.com" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-envelope"></i> <span>sarrat@protonmail.com</span>
+            </a>
           </div>
         </div>
       </div>

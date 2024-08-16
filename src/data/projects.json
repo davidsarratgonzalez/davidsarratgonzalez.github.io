@@ -1,10 +1,7 @@
 [
   {
-    "name": "Lorem ipsum",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  {
-    "name": "Lorem ipsum",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "name": "dsOMOP: A DataSHIELD Integration for OMOP CDM Databases",
+    "description": "A suite of DataSHIELD packages for integration with standardized clinical databases in the Observational Medical Outcomes Partnership Common Data Model (OMOP CDM).",
+    "link": "https://isglobal-brge.github.io/dsOMOP"
   }
 ]
