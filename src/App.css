@@ -138,6 +138,7 @@ h2 {
   display: flex;
   margin-bottom: 15px;
   align-items: flex-start;
+  flex-wrap: nowrap; /* Añadido para evitar que los bloques se vayan a una línea distinta */
 }
 
 .entry-logo {
@@ -202,6 +203,10 @@ a:hover {
   .social-links {
     align-items: center;
   }
+
+  .entry {
+    flex-wrap: nowrap; /* Asegura que los bloques permanezcan en la misma línea */
+  }
 }
 
 @media (max-width: 600px) {
@@ -210,7 +215,7 @@ a:hover {
   }
 
   .entry {
-    flex-direction: column;
+    flex-wrap: nowrap; /* Asegura que los bloques permanezcan en la misma línea */
   }
 
   .entry-logo {
