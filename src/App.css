@@ -15,28 +15,84 @@ body {
 }
 
 /* Header Styles */
-header {
-  text-align: center;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.profile-image {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 10px;
+.header-left, .header-center, .header-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
 }
 
-h1 {
-  margin: 0;
+.header-left {
+  align-items: flex-start;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.header-right {
+  align-items: flex-end;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.header-center h1 {
+  margin: 0 0 5px 0;
   font-size: 24px;
   font-weight: bold;
 }
 
-header p {
+.header-divider {
+  width: 50%;
+  margin: 5px auto;
+  border: none;
+  border-top: 1px solid #000;
+}
+
+.header-subtitle {
+  font-size: 18px;
+  margin: 5px 0 0 0;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.social-links i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+/* Common Text Styles */
+p {
   margin: 5px 0;
   font-size: 16px;
 }
 
+/* Social Icons */
 .social-icons {
   margin-top: 15px;
 }
@@ -60,11 +116,7 @@ header p {
   background-color: #f0f0f0;
 }
 
-/* Main Content Styles */
-main {
-  padding: 0;
-}
-
+/* Section Styles */
 section {
   margin-bottom: 20px;
 }
@@ -80,12 +132,14 @@ h2 {
 .entry {
   display: flex;
   margin-bottom: 15px;
+  align-items: flex-start;
 }
 
 .entry-logo {
   width: 50px;
   height: 50px;
   margin-right: 10px;
+  align-self: center; /* Esto alineará el logo verticalmente con el contenido */
 }
 
 .entry-content {
@@ -112,51 +166,39 @@ h2 {
   text-align: right;
   font-size: 14px;
   white-space: nowrap;
+  align-self: flex-start; /* Mantiene la fecha en la parte superior */
 }
 
-/* Publications Styles */
-#publications .entry {
-  display: flex;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-#publications .entry-content {
-  flex-grow: 1;
-}
-
-#publications .entry-title {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-#publications .entry-subtitle {
-  margin: 1px 0;
-  font-size: 14px;
-}
-
-#publications .entry-description {
-  margin: 1px 0;
-  font-size: 14px;
-}
-
-#publications .entry-date {
-  text-align: right;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-#publications .entry-description a {
+/* Link Styles */
+a {
   color: #000;
   text-decoration: none;
 }
 
-#publications .entry-description a:hover {
+a:hover {
   text-decoration: underline;
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-left, .header-center, .header-right {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    height: auto;
+    align-items: center;
+  }
+
+  .social-links {
+    align-items: center;
+  }
+}
+
 @media (max-width: 600px) {
   .App {
     padding: 10px;
