@@ -66,10 +66,15 @@ body {
   margin: 5px 0 0 0;
 }
 
+.social-links-container {
+  display: inline-block;
+  text-align: left;
+}
+
 .social-links {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .social-links a {

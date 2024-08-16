@@ -19,16 +19,18 @@ function Header() {
         <p className="header-subtitle">{aboutData.title}</p>
       </div>
       <div className="header-right">
-        <div className="social-links">
-          <a href="https://www.linkedin.com/in/davidsarratgonzalez" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin"></i> /in/davidsarratgonzalez
-          </a>
-          <a href="https://github.com/davidsarratgonzalez" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github"></i> /davidsarratgonzalez
-          </a>
-          <a href="https://orcid.org/0000-0002-9064-3303" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-orcid"></i> 0000-0002-9064-3303
-          </a>
+        <div className="social-links-container">
+          <div className="social-links">
+            <a href="https://www.linkedin.com/in/davidsarratgonzalez" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin"></i> /in/davidsarratgonzalez
+            </a>
+            <a href="https://github.com/davidsarratgonzalez" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github"></i> /davidsarratgonzalez
+            </a>
+            <a href="https://orcid.org/0000-0002-9064-3303" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-orcid"></i> 0000-0002-9064-3303
+            </a>
+          </div>
         </div>
       </div>
     </header>
