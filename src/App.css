@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
   font-family: 'Times New Roman', serif;
   line-height: 1.4;
@@ -14,7 +13,6 @@ body {
   padding: 20px;
 }
 
-/* Header Styles */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -43,8 +41,8 @@ body {
 }
 
 .profile-image {
-  width: 120px; /* Cambiado de 100px a 120px */
-  height: 120px; /* Cambiado de 100px a 120px */
+  width: 120px;
+  height: 120px;
   object-fit: cover;
 }
 
@@ -52,7 +50,7 @@ body {
   margin: 0 0 5px 0;
   font-size: 24px;
   font-weight: bold;
-  font-family: inherit; /* Asegura que la fuente sea la misma que el resto del documento */
+  font-family: inherit;
 }
 
 .header-divider {
@@ -65,7 +63,7 @@ body {
 .header-subtitle {
   font-size: 18px;
   margin: 5px 0 0 0;
-  font-family: inherit; /* Asegura que la fuente sea la misma que el resto del documento */
+  font-family: inherit;
 }
 
 .social-links-container {
@@ -93,13 +91,11 @@ body {
   font-size: 18px;
 }
 
-/* Common Text Styles */
 p {
   margin: 5px 0;
   font-size: 16px;
 }
 
-/* Social Icons */
 .social-icons {
   margin-top: 15px;
 }
@@ -123,7 +119,6 @@ p {
   background-color: #f0f0f0;
 }
 
-/* Section Styles */
 section {
   margin-bottom: 20px;
 }
@@ -135,23 +130,24 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Entry Styles */
 .entry {
   display: flex;
   margin-bottom: 15px;
-  align-items: flex-start;
-  flex-wrap: nowrap; /* Añadido para evitar que los bloques se vayan a una línea distinta */
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .entry-logo {
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  align-self: center; /* Esto alineará el logo verticalmente con el contenido */
 }
 
 .entry-content {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .entry-title {
@@ -174,10 +170,9 @@ h2 {
   text-align: right;
   font-size: 14px;
   white-space: nowrap;
-  align-self: flex-start; /* Mantiene la fecha en la parte superior */
+  align-self: flex-start;
 }
 
-/* Link Styles */
 a {
   color: #000;
   text-decoration: none;
@@ -187,7 +182,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -203,26 +197,26 @@ a:hover {
   }
 
   .social-links {
-    flex-direction: row; /* Cambia la dirección a fila */
-    justify-content: center; /* Centra los iconos */
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
 
   .social-links a {
-    margin: 0 10px; /* Ajusta el espaciado entre los iconos */
-    font-size: 24px; /* Ajusta el tamaño de los iconos */
+    margin: 0 10px;
+    font-size: 24px;
   }
 
   .social-links i {
-    font-size: 24px; /* Ajusta el tamaño de los iconos */
+    font-size: 24px;
   }
 
   .social-links a span {
-    display: none; /* Oculta el texto de los enlaces */
+    display: none;
   }
 
   .entry {
-    flex-wrap: nowrap; /* Asegura que los bloques permanezcan en la misma línea */
+    flex-wrap: nowrap;
   }
 }
 
@@ -232,7 +226,7 @@ a:hover {
   }
 
   .entry {
-    flex-wrap: nowrap; /* Asegura que los bloques permanezcan en la misma línea */
+    flex-wrap: nowrap;
   }
 
   .entry-logo {
