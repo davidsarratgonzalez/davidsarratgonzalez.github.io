@@ -78,13 +78,17 @@ body {
   align-items: flex-start;
 }
 
-.social-links a {
+.social-links a,
+.social-links .social-link {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  text-decoration: none;
   color: #000;
   font-size: 14px;
+}
+
+.social-links a {
+  text-decoration: none;
 }
 
 .social-links a:hover {
@@ -98,11 +102,6 @@ body {
 .social-links i {
   margin-right: 5px;
   font-size: 18px;
-}
-
-.social-links .website-link:hover {
-  text-decoration: none;
-  cursor: default;
 }
 
 p {
@@ -217,7 +216,8 @@ a:hover {
     align-items: center;
   }
 
-  .social-links a {
+  .social-links a,
+  .social-links .social-link {
     margin: 0 10px;
     font-size: 24px;
   }
@@ -226,11 +226,12 @@ a:hover {
     font-size: 24px;
   }
 
-  .social-links a span {
+  .social-links a span,
+  .social-links .social-link span {
     display: none;
   }
 
-  .social-links .website-link {
+  .social-links .social-link {
     display: none;
   }
 
