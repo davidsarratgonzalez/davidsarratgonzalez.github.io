@@ -10,14 +10,13 @@ body {
 .App {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .header-left, .header-center, .header-right {
@@ -243,7 +242,7 @@ a:hover {
 
 @media (max-width: 600px) {
   .App {
-    padding: 10px;
+    padding: 20px 10px 0 10px;
   }
 
   .entry {
