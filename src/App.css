@@ -51,6 +51,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   font-family: inherit;
+  white-space: nowrap;
 }
 
 .header-divider {
