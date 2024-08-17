@@ -87,9 +87,22 @@ body {
   font-size: 14px;
 }
 
+.social-links a:hover {
+  text-decoration: none;
+}
+
+.social-links a:hover .link-text {
+  text-decoration: underline;
+}
+
 .social-links i {
   margin-right: 5px;
   font-size: 18px;
+}
+
+.social-links .website-link:hover {
+  text-decoration: none;
+  cursor: default;
 }
 
 p {
@@ -214,6 +227,10 @@ a:hover {
   }
 
   .social-links a span {
+    display: none;
+  }
+
+  .social-links .website-link {
     display: none;
   }
 

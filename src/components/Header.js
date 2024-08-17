@@ -23,27 +23,27 @@ function Header() {
           <div className="social-links">
             {aboutData.linkedin && (
               <a href={`https://www.linkedin.com/in/${aboutData.linkedin}`} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin"></i> <span>/in/{aboutData.linkedin}</span>
+                <i className="fab fa-linkedin"></i> <span className="link-text">/in/{aboutData.linkedin}</span>
               </a>
             )}
             {aboutData.github && (
               <a href={`https://github.com/${aboutData.github}`} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i> <span>/{aboutData.github}</span>
+                <i className="fab fa-github"></i> <span className="link-text">/{aboutData.github}</span>
               </a>
             )}
             {aboutData.orcid && (
               <a href={`https://orcid.org/${aboutData.orcid}`} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-orcid"></i> <span>{aboutData.orcid}</span>
+                <i className="fab fa-orcid"></i> <span className="link-text">{aboutData.orcid}</span>
               </a>
             )}
             {aboutData.website && (
-              <a href={aboutData.website} target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-globe"></i> <span>{aboutData.website.replace(/^https?:\/\//, '')}</span>
+              <a href="#" className="website-link">
+                <i className="fas fa-globe"></i> <span className="link-text">{aboutData.website.replace(/^https?:\/\//, '')}</span>
               </a>
             )}
             {aboutData.email && (
               <a href={`mailto:${aboutData.email}`} target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-envelope"></i> <span>{aboutData.email}</span>
+                <i className="fas fa-envelope"></i> <span className="link-text">{aboutData.email}</span>
               </a>
             )}
           </div>
