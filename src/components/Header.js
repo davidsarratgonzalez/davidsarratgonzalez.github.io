@@ -37,9 +37,9 @@ function Header() {
               </a>
             )}
             {aboutData.website && (
-              <div className="social-link">
+              <a href={`https://${aboutData.website.replace(/^https?:\/\//, '')}`} target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="fas fa-globe"></i> <span>{aboutData.website.replace(/^https?:\/\//, '')}</span>
-              </div>
+              </a>
             )}
             {aboutData.email && (
               <a href={`mailto:${aboutData.email}`} target="_blank" rel="noopener noreferrer">

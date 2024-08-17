@@ -82,6 +82,7 @@ body {
 .social-links .social-link {
   display: flex;
   align-items: center;
+  margin-top: 5px;
   margin-bottom: 5px;
   color: #000;
   font-size: 14px;
@@ -95,7 +96,8 @@ body {
   text-decoration: none;
 }
 
-.social-links a:hover .link-text {
+.social-links a:hover .link-text,
+.social-links .social-link:hover span {
   text-decoration: underline;
 }
 
@@ -218,12 +220,13 @@ a:hover {
 
   .social-links a,
   .social-links .social-link {
-    margin: 0 10px;
+    margin: 0 15px;
     font-size: 24px;
   }
 
   .social-links i {
     font-size: 24px;
+    margin-right: 0;
   }
 
   .social-links a span,
