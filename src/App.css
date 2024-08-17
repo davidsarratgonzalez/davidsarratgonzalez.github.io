@@ -172,6 +172,7 @@ h2 {
   font-size: 14px;
   white-space: nowrap;
   align-self: flex-start;
+  padding-left: 10px;
 }
 
 a {
@@ -236,6 +237,5 @@ a:hover {
 
   .entry-date {
     text-align: left;
-    margin-top: 5px;
   }
 }

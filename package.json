@@ -2,6 +2,7 @@
   "name": "davidsarratgonzalez.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://davidsarratgonzalez.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@testing-library/jest-dom": "^5.17.0",
