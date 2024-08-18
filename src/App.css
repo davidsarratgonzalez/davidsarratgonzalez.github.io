@@ -238,6 +238,10 @@ a:hover {
     display: none;
   }
 
+  .social-links .website-link {
+    display: none;
+  }
+
   .entry {
     flex-wrap: nowrap;
   }

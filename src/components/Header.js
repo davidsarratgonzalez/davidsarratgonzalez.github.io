@@ -2,6 +2,35 @@ import React from 'react';
 import aboutData from '../data/about.json';
 
 function Header() {
+  const socialLinks = {
+    linkedin: {
+      icon: 'fab fa-linkedin',
+      url: `https://www.linkedin.com/in/${aboutData.linkedin}`,
+      text: `/in/${aboutData.linkedin}`
+    },
+    github: {
+      icon: 'fab fa-github',
+      url: `https://github.com/${aboutData.github}`,
+      text: `/${aboutData.github}`
+    },
+    orcid: {
+      icon: 'fab fa-orcid',
+      url: `https://orcid.org/${aboutData.orcid}`,
+      text: aboutData.orcid
+    },
+    website: {
+      icon: 'fas fa-globe',
+      url: `https://${aboutData.website.replace(/^https?:\/\//, '')}`,
+      text: aboutData.website.replace(/^https?:\/\//, ''),
+      className: 'website-link' // Added a specific class
+    },
+    email: {
+      icon: 'fas fa-envelope',
+      url: `mailto:${aboutData.email}`,
+      text: aboutData.email
+    }
+  };
+
   return (
     <header className="header-container">
       <div className="header-left">
@@ -21,31 +50,23 @@ function Header() {
       <div className="header-right">
         <div className="social-links-container">
           <div className="social-links">
-            {aboutData.linkedin && (
-              <a href={`https://www.linkedin.com/in/${aboutData.linkedin}`} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin"></i> <span className="link-text">/in/{aboutData.linkedin}</span>
-              </a>
-            )}
-            {aboutData.github && (
-              <a href={`https://github.com/${aboutData.github}`} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i> <span className="link-text">/{aboutData.github}</span>
-              </a>
-            )}
-            {aboutData.orcid && (
-              <a href={`https://orcid.org/${aboutData.orcid}`} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-orcid"></i> <span className="link-text">{aboutData.orcid}</span>
-              </a>
-            )}
-            {aboutData.website && (
-              <a href={`https://${aboutData.website.replace(/^https?:\/\//, '')}`} target="_blank" rel="noopener noreferrer" className="social-link">
-                <i className="fas fa-globe"></i> <span>{aboutData.website.replace(/^https?:\/\//, '')}</span>
-              </a>
-            )}
-            {aboutData.email && (
-              <a href={`mailto:${aboutData.email}`} target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-envelope"></i> <span className="link-text">{aboutData.email}</span>
-              </a>
-            )}
+            {Object.keys(aboutData).map((key) => {
+              if (socialLinks[key] && aboutData[key]) {
+                return (
+                  <a
+                    key={key}
+                    href={socialLinks[key].url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={socialLinks[key].className || ''}
+                  >
+                    <i className={socialLinks[key].icon}></i>
+                    <span className="link-text">{socialLinks[key].text}</span>
+                  </a>
+                );
+              }
+              return null;
+            })}
           </div>
         </div>
       </div>
