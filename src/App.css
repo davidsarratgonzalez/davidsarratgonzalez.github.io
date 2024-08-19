@@ -1,7 +1,11 @@
+body, .social-links a, .social-links .social-link, .social-icons a, a {
+  color: #000;
+  text-decoration: none;
+}
+
 body {
   font-family: 'Times New Roman', serif;
   line-height: 1.4;
-  color: #000;
   background-color: #fff;
   margin: 0;
   padding: 0;
@@ -84,15 +88,11 @@ body {
   align-items: center;
   margin-top: 5px;
   margin-bottom: 5px;
-  color: #000;
   font-size: 14px;
 }
 
-.social-links a {
-  text-decoration: none;
-}
-
-.social-links a:hover {
+.social-links a:hover,
+.social-links .social-link:hover {
   text-decoration: none;
 }
 
@@ -116,10 +116,8 @@ p {
 }
 
 .social-icons a {
-  color: #000;
   font-size: 18px;
   margin: 0 10px;
-  text-decoration: none;
   display: inline-block;
   padding: 5px;
   border: 1px solid #000;
@@ -171,27 +169,18 @@ h2 {
   font-weight: bold;
 }
 
-.entry-subtitle {
-  margin: 1px 0;
-  font-size: 14px;
-}
-
-.entry-description {
+.entry-subtitle,
+.entry-description,
+.entry-date {
   margin: 1px 0;
   font-size: 14px;
 }
 
 .entry-date {
   text-align: right;
-  font-size: 14px;
   white-space: nowrap;
   align-self: flex-start;
   padding-left: 10px;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
 }
 
 a:hover {
@@ -234,14 +223,8 @@ a:hover {
   }
 
   .social-links a span,
-  .social-links .social-link span {
-    display: none;
-  }
-
-  .social-links .social-link {
-    display: none;
-  }
-
+  .social-links .social-link span,
+  .social-links .social-link,
   .social-links .website-link {
     display: none;
   }
