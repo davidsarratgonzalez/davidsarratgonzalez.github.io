@@ -1,14 +1,10 @@
 [
   {
-    "authors": "González JR, Cáceres A, Ferrer E, Balagué-Dobón L, Escribà-Montagut X, Sarrat-González D, Quintás G, Rodas G.",
+    "authors": "Juan R. González, Alejandro Cáceres, Eva Ferrer, Laura Balagué-Dobón, Xavier Escribà-Montagut, David Sarrat-González, Guillermo Quintás, Gil Rodas",
     "month": "May",
     "year": "2024",
     "title": "Predicting Injuries in Elite Female Football Players With Global-Positioning-System and Multiomics Data",
     "journal": "Int J Sports Physiol Perform",
-    "volume": "19",
-    "issue": "7",
-    "pages": "661-669",
-    "doi": "10.1123/ijspp.2023-0184",
-    "pmid": "38753297"
+    "doi": "10.1123/ijspp.2023-0184"
   }
 ]

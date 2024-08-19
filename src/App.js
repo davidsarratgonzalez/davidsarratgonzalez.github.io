@@ -6,6 +6,9 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Publications from './components/Publications';
 import Projects from './components/Projects';
+import Posters from './components/Posters';
+import Talks from './components/Talks';
+import Awards from './components/Awards';
 import aboutData from './data/about.json';
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
         <Education />
         <Publications />
         <Projects />
+        <Posters />
+        <Talks />
+        <Awards />
       </main>
     </div>
   );
