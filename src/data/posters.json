@@ -1,6 +1,6 @@
 [
   {
-    "title": "Federated Analysis of Harmonized Clinical Data Combining OMOP CDM and DataSHIELD in a DATOS-CAT Cohort Use Case",
+    "title": "dsOMOP: Federated Analysis of Harmonized Clinical Data Combining OMOP CDM and DataSHIELD in a DATOS-CAT Cohort Use Case",
     "authors": "David Sarrat-González, Judith Martínez-González, Xavier Escribà-Montagut, Aikaterini Lymperidou, Ramón Mateo, Rafael de Cid, Juan R González, Alberto Labarga",
     "event": "OHDSI Europe Symposium 2024",
     "date": "Jun 2024"
@@ -13,9 +13,10 @@
   },
   {
     "title": "DATOS-CAT: Leveraging ELIXIR ecosystem for the standardization, integration and federated analysis of population-based biomedical data",
-    "authors": "Judith Martínez-González, Guillem Bracons Cucó, Aikaterini Lymperidou, Xavier Escribà-Montagut, Marta Huertas, Ramon Mateo-Navarro, David Sarrat-González, Santiago Frid, Rafael de Cid, Juan Ramón González, Alberto Labarga",
-    "event": "15th International SWAT4HCLS Conference",
-    "date": "May 2024"
+    "authors": "Judith Martínez-González, David Sarrat-González, Ramon Mateo-Navarro, Guillem Bracons Cucó, Aikaterini Lymperidou, Marta Huertas, Sergi Aguiló-Castillo, Salvador Capella-Gutiérrez, Rafael de Cid, Santiago Frid, Juan R González, Alberto Labarga",
+    "event": "ELIXIR All Hands 2024",
+    "date": "May 2024",
+    "doi": "10.7490/f1000research.1119723.1"
   },
   {
     "title": "RadGen4COPD: Developing a Secure and Efficient Platform for Integrated Medical Imaging and Genomic Studies of COPD",
