@@ -4,7 +4,7 @@ import experienceData from '../data/experience.json';
 function Experience() {
   return (
     <section id="experience">
-      <h2>Experience</h2>
+      <h2>Work Experience</h2>
       {experienceData.map((job, index) => (
         <div className="entry" key={index}>
           {job.logo && (

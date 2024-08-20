@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Presentations from './components/Presentations';
 import Posters from './components/Posters';
 import Awards from './components/Awards';
+import Theses from './components/Theses';
 import aboutData from './data/about.json';
 
 function App() {
@@ -23,10 +24,11 @@ function App() {
         <About />
         <Experience />
         <Education />
-        <Publications />
         <Projects />
+        <Publications />
         <Presentations />
         <Posters />
+        <Theses />
         <Awards />
       </main>
     </div>
