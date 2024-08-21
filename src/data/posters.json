@@ -7,13 +7,14 @@
   },
   {
     "title": "DATOS-CAT: Methodologies for the standardization, integration and analysis of population-based biomedical data using semantic technologies",
-    "authors": "Judith Martínez-González, David Sarrat-González, Ramón Mateo-Navarro, Guillem Bracons Cucó, Aikaterini Lymperidou, Marta Huertas, Sergi Aguiló-Castillo, Salvador Capella-Gutiérrez, Rafael de Cid, Santiago Frid, Juan R González, Alberto Labarga",
-    "event": "OHDSI Europe Symposium 2024",
-    "date": "Jun 2024"
+    "authors": "Judith Martinez Gonzalez, Guillem Bracons Cucó, Aikaterini Lymperidou, Xavier Escribà-Montagut, Marta Huertas, Ramon Mateo Navarro, David Sarrat González, Santiago Frid, Rafael de Cid, Juan Ramon González Ruiz, Alberto Labarga",
+    "event": "15th International SWAT4HCLS Conference",
+    "date": "Jun 2024",
+    "doi": "10.4126/FRL01-006473251"
   },
   {
     "title": "DATOS-CAT: Leveraging ELIXIR ecosystem for the standardization, integration and federated analysis of population-based biomedical data",
-    "authors": "Judith Martínez-González, David Sarrat-González, Ramon Mateo-Navarro, Guillem Bracons Cucó, Aikaterini Lymperidou, Marta Huertas, Sergi Aguiló-Castillo, Salvador Capella-Gutiérrez, Rafael de Cid, Santiago Frid, Juan R González, Alberto Labarga",
+    "authors": "Judith Martinez-Gonzalez, David Sarrat-González, Ramon Mateo-Navarro, Guillem Bracons Cucó, Aikaterini Lymperidou, Marta Huertas, Sergi Aguiló-Castillo, Salvador Capella-Gutiérrez, Rafael de Cid, Santiago Frid, Juan R González, Alberto Labarga",
     "event": "ELIXIR All Hands 2024",
     "date": "May 2024",
     "doi": "10.7490/f1000research.1119723.1"
