@@ -13,7 +13,7 @@ function Posters() {
             <p className="entry-subtitle"><em>{poster.event}</em></p>
             {poster.description && <p className="entry-description">{poster.description}</p>}
             {poster.doi && (
-              <p className="entry-description">
+              <p className="entry-description left-aligned-link">
                 <strong>DOI:</strong> <a href={`https://doi.org/${poster.doi}`} target="_blank" rel="noopener noreferrer">{poster.doi}</a>
               </p>
             )}

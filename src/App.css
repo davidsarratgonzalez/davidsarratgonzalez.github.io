@@ -194,6 +194,12 @@ a:hover {
   text-decoration: underline;
 }
 
+/* New class for left-aligned links */
+.left-aligned-link {
+  text-align: left;
+  display: block;
+}
+
 @media (max-width: 768px) {
   .App {
     padding-bottom: 0;

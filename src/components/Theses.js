@@ -12,7 +12,7 @@ function Theses() {
             <p className="entry-subtitle">{thesis.author}</p>
             <p className="entry-subtitle"><em>{thesis.degree}</em></p>
             {thesis.uri && (
-              <p className="entry-description">
+              <p className="entry-description left-aligned-link">
                 <strong>URI:</strong> <a href={thesis.uri} target="_blank" rel="noopener noreferrer">{thesis.uri.replace(/^https?:\/\//, '')}</a>
               </p>
             )}

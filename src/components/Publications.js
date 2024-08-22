@@ -18,7 +18,7 @@ function Publications() {
               </em>
             </p>
             {pub.doi && (
-              <p className="entry-description">
+              <p className="entry-description left-aligned-link">
                 <strong>DOI:</strong> <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer">{pub.doi}</a>
               </p>
             )}

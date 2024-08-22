@@ -12,7 +12,7 @@ function Awards() {
             {award.description && <p className="entry-description">{award.description}</p>}
             <p className="entry-subtitle"><em>{award.organization}</em></p>
             {award.link && (
-              <p className="entry-description">
+              <p className="entry-description left-aligned-link">
                 <strong>Link:</strong> <a href={award.link} target="_blank" rel="noopener noreferrer">{award.link.replace(/^https?:\/\//, '')}</a>
               </p>
             )}
