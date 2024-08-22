@@ -154,6 +154,7 @@ h2 {
   width: 50px;
   height: 50px;
   margin-right: 10px;
+  align-self: center;
 }
 
 .entry-content {
@@ -194,13 +195,11 @@ a:hover {
   text-decoration: underline;
 }
 
-/* New class for left-aligned links */
 .left-aligned-link {
   text-align: left;
   display: block;
 }
 
-/* New class for left-aligned entries */
 .left-aligned-entry .entry-title,
 .left-aligned-entry .entry-description,
 .left-aligned-entry .entry-subtitle,
@@ -262,10 +261,6 @@ a:hover {
 
   .entry {
     flex-wrap: nowrap;
-  }
-
-  .entry-logo {
-    margin-bottom: 5px;
   }
 
   .entry-date {
