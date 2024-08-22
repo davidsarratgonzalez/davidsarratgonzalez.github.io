@@ -19,5 +19,19 @@
     "startDate": "Jun 2020",
     "endDate": "Sep 2020",
     "logo": "udl.jpeg"
+  },
+  {
+    "jobTitle": "Computer Engineering Intern",
+    "company": "Diputació de Lleida",
+    "startDate": "Sep 2018",
+    "endDate": "Jun 2019",
+    "logo": "diputaciolleida.jpeg"
+  },
+  {
+    "jobTitle": "Teacher",
+    "company": "Aula Técnica",
+    "startDate": "Jun 2017",
+    "endDate": "Sep 2018",
+    "logo": "aulatecnica.jpeg"
   }
 ]

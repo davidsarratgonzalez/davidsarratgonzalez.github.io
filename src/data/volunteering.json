@@ -1,0 +1,16 @@
+[
+  {
+    "position": "President",
+    "organization": "IAESTE LC Lleida",
+    "startDate": "Sep 2018",
+    "endDate": "Dec 2020",
+    "logo": "iaeste.jpeg"
+  },
+  {
+    "position": "Co-Founder",
+    "organization": "LleidaHack",
+    "startDate": "Apr 2018",
+    "endDate": "Dec 2020",
+    "logo": "lleidahack.jpeg"
+  }
+]
