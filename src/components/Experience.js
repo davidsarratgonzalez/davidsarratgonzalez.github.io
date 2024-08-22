@@ -6,7 +6,7 @@ function Experience() {
     <section id="experience">
       <h2>Work Experience</h2>
       {experienceData.map((job, index) => (
-        <div className="entry" key={index}>
+        <div className="entry left-aligned-entry" key={index}>
           {job.logo && (
             <img
               src={`/images/${job.logo}`}

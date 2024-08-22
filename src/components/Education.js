@@ -6,7 +6,7 @@ function Education() {
     <section id="education">
       <h2>Education</h2>
       {educationData.map((edu, index) => (
-        <div className="entry" key={index}>
+        <div className="entry left-aligned-entry" key={index}>
           {edu.logo && (
             <img
               src={`/images/${edu.logo}`}

@@ -187,7 +187,7 @@ h2 {
   text-align: right;
   white-space: nowrap;
   align-self: flex-start;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 a:hover {
@@ -198,6 +198,14 @@ a:hover {
 .left-aligned-link {
   text-align: left;
   display: block;
+}
+
+/* New class for left-aligned entries */
+.left-aligned-entry .entry-title,
+.left-aligned-entry .entry-description,
+.left-aligned-entry .entry-subtitle,
+.left-aligned-entry .entry-date {
+  text-align: left;
 }
 
 @media (max-width: 768px) {
