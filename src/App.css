@@ -163,6 +163,13 @@ h2 {
   justify-content: center;
 }
 
+.entry-title,
+.entry-description,
+.entry-subtitle,
+.entry-date {
+  text-align: justify;
+}
+
 .entry-title {
   margin: 0;
   font-size: 16px;
