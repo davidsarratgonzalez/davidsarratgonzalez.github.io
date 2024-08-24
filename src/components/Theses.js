@@ -4,7 +4,7 @@ import thesesData from '../data/theses.json';
 function Theses() {
   return (
     <section id="theses">
-      <h2>Directed Theses</h2>
+      <h2>Directed Student Theses</h2>
       {thesesData.map((thesis, index) => (
         <div className="entry" key={index}>
           <div className="entry-content">
