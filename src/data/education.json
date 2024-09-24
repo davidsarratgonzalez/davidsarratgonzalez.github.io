@@ -9,6 +9,14 @@
   },
   {
     "degree": "Master's degree",
+    "fieldOfStudy": "Data Science",
+    "university": "Universitat Oberta de Catalunya",
+    "startDate": "Sep 2024",
+    "endDate": "Present",
+    "logo": "uoc.jpeg"
+  },
+  {
+    "degree": "Master's degree",
     "fieldOfStudy": "Computer Engineering",
     "university": "Universitat de Lleida",
     "startDate": "Sep 2019",
