@@ -1,5 +1,11 @@
 [
   {
+    "title": "DeliverEat: Design and Development of a Food Delivery Application",
+    "date": "Sep 2024",
+    "author": "Tiberiu Ionut Paiu",
+    "degree": "Bachelor's Degree in Computer Engineering, Universitat de Lleida"
+  },
+  {
     "title": "Development and Integration of a Private Chatbot Using Retrieval-Augmented Generation",
     "date": "Jun 2024",
     "author": "Laura Haro Escoi",
@@ -7,27 +13,27 @@
     "uri": "https://repositori.udl.cat/handle/10459.1/466183"
   },
   {
-    "title": "Last mile delivery optimitzation",
+    "title": "Last Mile Delivery Optimitzation",
     "date": "Jun 2024",
     "author": "Pol Escolà Curcó",
     "degree": "Bachelor's Degree in Computer Engineering, Universitat de Lleida",
     "uri": "https://repositori.udl.cat/handle/10459.1/466184"
   },
   {
-    "title": "Creation and development of a Farm Simulator videogame: design and implementation",
+    "title": "Design and Development of a Farm Simulator Videogame",
     "date": "Jun 2024",
     "author": "María Planella Vall",
     "degree": "Bachelor's Degree in Computer Engineering, Universitat de Lleida",
     "uri": "https://repositori.udl.cat/handle/10459.1/466020"
   },
   {
-    "title": "LifeTwin: A unified approach for modelling medical digital twins",
+    "title": "LifeTwin: A Unified Approach for Modelling Medical Digital Twins",
     "date": "Oct 2023",
     "author": "Josep Maria Salvia Hornos",
     "degree": "Master's Degree in Computer Engineering, Universitat de Lleida"
   },
   {
-    "title": "University Q&A Bot using Contextualized GPT-3",
+    "title": "University Q&A Bot Using Contextualized GPT-3",
     "date": "Jun 2023",
     "author": "Marc Melis Batalla",
     "degree": "Bachelor's Degree in Computer Engineering, Universitat de Lleida",
