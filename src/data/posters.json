@@ -1,5 +1,11 @@
 [
   {
+    "title": "dsRadiomics: A High-Performance Computing Framework for Federated Radiomic Feature Analysis",
+    "authors": "David Sarrat-González, Juan R González",
+    "event": "Workshop of the Interuniversity PhD Programme in Bioinformatics 2025",
+    "date": "Feb 2025"
+  },
+  {
     "title": "dsOMOP: Federated Analysis of Harmonized Clinical Data Combining OMOP CDM and DataSHIELD in a DATOS-CAT Cohort Use Case",
     "authors": "David Sarrat-González, Judith Martínez-González, Xavier Escribà-Montagut, Aikaterini Lymperidou, Ramón Mateo, Rafael de Cid, Juan R González, Alberto Labarga",
     "event": "OHDSI Europe Symposium 2024",
