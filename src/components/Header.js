@@ -22,7 +22,7 @@ function Header() {
       icon: 'fas fa-globe',
       url: `https://${aboutData.website.replace(/^https?:\/\//, '')}`,
       text: aboutData.website.replace(/^https?:\/\//, ''),
-      className: 'website-link' // Added a specific class
+      className: 'website-link'
     },
     email: {
       icon: 'fas fa-envelope',

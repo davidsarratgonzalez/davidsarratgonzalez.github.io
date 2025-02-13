@@ -10,7 +10,8 @@ import Presentations from './components/Presentations';
 import Posters from './components/Posters';
 import Awards from './components/Awards';
 import Theses from './components/Theses';
-import Volunteering from './components/Volunteering'; // Importa el nuevo componente
+import Volunteering from './components/Volunteering';
+import Workshops from './components/Workshops';
 import aboutData from './data/about.json';
 
 function App() {
@@ -28,10 +29,11 @@ function App() {
         <Projects />
         <Publications />
         <Presentations />
+        <Workshops />
         <Posters />
         <Theses />
         <Awards />
-        <Volunteering /> {/* Usa el nuevo componente */}
+        <Volunteering />
       </main>
     </div>
   );

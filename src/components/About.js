@@ -3,7 +3,7 @@ import aboutData from '../data/about.json';
 
 function About() {
   if (!aboutData.description) {
-    return null; // No renderiza nada si no hay descripción
+    return null;
   }
 
   return (
