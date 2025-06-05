@@ -216,19 +216,6 @@ a:hover {
 
 .optimized-image {
   display: block;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.optimized-image.loaded {
-  opacity: 1;
-}
-
-.image-loading-placeholder,
-.image-error-placeholder,
-.image-placeholder {
-  font-size: 12px;
-  color: #999;
-  user-select: none;
 }
 
 /* Profile image specific styles */
@@ -247,7 +234,6 @@ a:hover {
   border-radius: 50%;
 }
 
-.image-loading-placeholder.circular,
 .image-error-placeholder.circular,
 .image-placeholder.circular {
   border-radius: 50%;

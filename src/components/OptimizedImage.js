@@ -89,17 +89,10 @@ function OptimizedImage({
         className={`image-placeholder ${isCircular ? 'circular' : ''} ${className}`}
         style={{
           backgroundColor: getPlaceholderColor(),
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#999',
-          fontSize: '12px',
           borderRadius: isCircular ? '50%' : '0',
           ...style
         }}
-      >
-        Image not found
-      </div>
+      />
     );
   }
 
@@ -117,37 +110,12 @@ function OptimizedImage({
         onLoad={() => setIsLoaded(true)}
         onError={() => setHasError(true)}
         style={{
-          opacity: isLoaded && !hasError ? 1 : 0,
-          transition: 'opacity 0.3s ease-in-out',
           width: '100%',
           height: '100%',
           objectFit: 'cover',
           borderRadius: isCircular ? '50%' : '0'
         }}
       />
-      
-      {/* Loading placeholder */}
-      {!isLoaded && !hasError && (
-        <div 
-          className={`image-loading-placeholder ${isCircular ? 'circular' : ''}`}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: getPlaceholderColor(),
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#999',
-            fontSize: '12px',
-            borderRadius: isCircular ? '50%' : '0'
-          }}
-        >
-          Loading...
-        </div>
-      )}
       
       {/* Error placeholder */}
       {hasError && (
@@ -160,16 +128,9 @@ function OptimizedImage({
             right: 0,
             bottom: 0,
             backgroundColor: '#f5f5f5',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#999',
-            fontSize: '12px',
             borderRadius: isCircular ? '50%' : '0'
           }}
-        >
-          Failed to load
-        </div>
+        />
       )}
     </div>
   );

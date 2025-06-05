@@ -40,7 +40,7 @@ function App() {
   }, []);
 
   if (loading) {
-    return <div className="App">Loading...</div>;
+    return <div className="App"></div>;
   }
 
   const renderSections = () => {
