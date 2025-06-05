@@ -248,6 +248,127 @@ You can also override the circular setting for individual image instances:
 
 This gives you maximum flexibility to use different styles in different contexts while maintaining a consistent default behavior.
 
+## Example 7: Advanced Customization Features
+
+### Custom Link Text and Labels
+
+You can now customize how links are displayed:
+
+```json
+// In any data file (e.g., workshops.json)
+{
+  "title": "My Workshop",
+  "site": "University",
+  "date": "Jan 2024",
+  "link": "https://example.com/workshop",
+  "linkText": "Workshop Materials"  // Custom display text
+}
+```
+
+This will render as: **Link:** [Workshop Materials](https://example.com/workshop)
+
+### Flexible Line Configuration
+
+Each item type now supports flexible line ordering and styling:
+
+```json
+// In src/data/section-types.json
+{
+  "displayLines": [
+    { "field": "title", "type": "title", "order": 1 },
+    { "field": "author", "type": "subtitle", "order": 2 },
+    { "field": "event", "type": "subtitle", "order": 3 },
+    { "field": "location", "type": "subtitle", "order": 3, "sameLine": true, "prefix": ", " },
+    { "field": "description", "type": "description", "order": 4, "markdown": true }
+  ]
+}
+```
+
+Options:
+- `order`: Determines display sequence
+- `sameLine`: Combines with previous field on same line
+- `prefix`: Text to add before the field value
+- `italic`: Makes text italic
+- `markdown`: Enables markdown processing
+
+### Markdown Support
+
+You can now use basic markdown in description fields:
+
+```json
+{
+  "description": "**Research focus:** Federated analysis\n\n**Key responsibilities:**\n- Development of software packages\n- ****Implementation**** of protocols\n- Collaboration with researchers"
+}
+```
+
+Supported markdown:
+- `**text**` → **bold text**
+- `****text****` → **bold text** (alternative)
+- `- item` → Bulleted lists
+- `\n\n` → Paragraph breaks
+
+### Custom Link Labels
+
+Configure link labels for different types:
+
+```json
+// In section-types.json
+{ "field": "doi", "type": "link", "label": "DOI" }
+{ "field": "link", "type": "link", "label": "Website", "customText": true }
+{ "field": "uri", "type": "link", "label": "Repository" }
+```
+
+### Optional About Me Section
+
+The About Me section is now fully configurable:
+
+```json
+// In sections-config.json
+{
+  "about": {
+    "enabled": true,               // Show/hide section
+    "showTitle": true,            // Show "About Me" title
+    "showOnlyWithDescription": true // Only show if description exists
+  }
+}
+```
+
+### Combining Multiple Fields on One Line
+
+Create complex subtitle combinations:
+
+```json
+{
+  "displayLines": [
+    { "field": "degree", "type": "title", "order": 1 },
+    { "field": "fieldOfStudy", "type": "subtitle", "order": 2, "prefix": " in " },
+    { "field": "university", "type": "subtitle", "order": 2, "sameLine": true },
+    { "field": "location", "type": "subtitle", "order": 2, "sameLine": true, "prefix": ", " }
+  ]
+}
+```
+
+This renders as: "Master's Degree in Computer Science, University Name, Barcelona"
+
+### Complete Example: Customizing Publications
+
+```json
+{
+  "displayLines": [
+    { "field": "title", "type": "title", "order": 1 },
+    { "field": "authors", "type": "subtitle", "order": 2 },
+    { "field": "journal", "type": "subtitle", "order": 3, "italic": true },
+    { "field": "doi", "type": "link", "order": 4, "label": "DOI" }
+  ]
+}
+```
+
+This creates a publication with:
+1. Title as main heading
+2. Authors on line 2
+3. Journal name in italics on line 3  
+4. DOI link with "DOI:" label on line 4
+
 ## Benefits of This Approach
 
 1. **No Code Changes**: All customizations are done through JSON configuration

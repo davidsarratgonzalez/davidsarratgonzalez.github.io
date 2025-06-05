@@ -254,6 +254,31 @@ The system maintains all existing CSS styles and visual appearance. Special styl
 - `showTitle`: Controls whether the section title is displayed
 - `showInHeader`: For special sections like About that appear in the header
 
+### Advanced Features
+
+#### Flexible Line Configuration
+Each section type supports configurable display lines with:
+- **Custom ordering**: Control the sequence of information
+- **Same-line combinations**: Combine multiple fields on one line
+- **Italic styling**: Mark specific lines as italic
+- **Prefix text**: Add custom text before field values
+
+#### Smart Link System
+- **Custom link text**: Override default URL display text
+- **Configurable labels**: "DOI:", "Website:", "Repository:", etc.
+- **URL processing**: Automatic handling of different link types
+
+#### Markdown Support
+Basic markdown processing in description fields:
+- **Bold text**: `**text**` and `****text****`
+- **Bulleted lists**: Lines starting with `- `
+- **Paragraph breaks**: Double newlines
+
+#### Optional Sections
+- **About Me section**: Fully configurable and optional
+- **Conditional display**: Show sections only when content exists
+- **Flexible titles**: Show/hide section titles as needed
+
 ### Benefits
 
 - **Easy Content Management**: Update resume content by editing JSON files
@@ -261,6 +286,7 @@ The system maintains all existing CSS styles and visual appearance. Special styl
 - **Consistent Styling**: All sections use the same visual patterns automatically
 - **Maintainable**: Clear separation between data, configuration, and presentation logic
 - **Future-Proof**: Easy to extend with new features or section types
+- **Maximum Customization**: Control every aspect of how content is displayed
 
 ## Image Management System
 

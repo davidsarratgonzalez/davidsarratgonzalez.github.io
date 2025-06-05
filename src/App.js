@@ -53,9 +53,6 @@ function App() {
         const config = sectionsConfig.sections[sectionKey];
         const data = sectionsData[sectionKey];
 
-        // Skip About section as it's handled in Header
-        if (sectionKey === 'about') return null;
-
         return (
           <UniversalSection
             key={sectionKey}

@@ -7,8 +7,9 @@
       "dataSource": "about.json",
       "component": "About",
       "enabled": true,
-      "showTitle": false,
-      "showInHeader": true
+      "showTitle": true,
+      "showInHeader": true,
+      "showOnlyWithDescription": true
     },
     "experience": {
       "title": "Work Experience",

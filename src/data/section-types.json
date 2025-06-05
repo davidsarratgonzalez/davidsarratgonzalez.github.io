@@ -1,120 +1,186 @@
 {
   "itemTypes": {
     "job": {
+      "displayLines": [
+        { "field": "jobTitle", "type": "title", "order": 1 },
+        { "field": "company", "type": "subtitle", "order": 2 },
+        { "field": "description", "type": "description", "order": 3, "markdown": true }
+      ],
+      "dateFormat": "startDate - endDate",
       "fields": {
-        "jobTitle": { "type": "string", "required": true, "display": "title" },
-        "company": { "type": "string", "required": true, "display": "subtitle" },
-        "startDate": { "type": "string", "required": true, "display": "date" },
-        "endDate": { "type": "string", "required": false, "display": "date" },
-        "logo": { "type": "string", "required": false, "display": "logo" },
-        "description": { "type": "string", "required": false, "display": "description" }
-      },
-      "dateFormat": "startDate - endDate"
+        "jobTitle": { "type": "string", "required": true },
+        "company": { "type": "string", "required": true },
+        "startDate": { "type": "string", "required": true },
+        "endDate": { "type": "string", "required": false },
+        "logo": { "type": "string", "required": false },
+        "description": { "type": "string", "required": false }
+      }
     },
     "education": {
+      "displayLines": [
+        { "field": "degree", "type": "title", "order": 1 },
+        { "field": "fieldOfStudy", "type": "title", "order": 1, "sameLine": true, "prefix": " in " },
+        { "field": "university", "type": "subtitle", "order": 2 },
+        { "field": "description", "type": "description", "order": 3, "markdown": true }
+      ],
+      "dateFormat": "startDate - endDate",
       "fields": {
-        "degree": { "type": "string", "required": true, "display": "title" },
-        "fieldOfStudy": { "type": "string", "required": true, "display": "subtitle-prefix" },
-        "university": { "type": "string", "required": true, "display": "subtitle" },
-        "startDate": { "type": "string", "required": true, "display": "date" },
-        "endDate": { "type": "string", "required": false, "display": "date" },
-        "logo": { "type": "string", "required": false, "display": "logo" },
-        "description": { "type": "string", "required": false, "display": "description" }
-      },
-      "dateFormat": "startDate - endDate"
+        "degree": { "type": "string", "required": true },
+        "fieldOfStudy": { "type": "string", "required": true },
+        "university": { "type": "string", "required": true },
+        "startDate": { "type": "string", "required": true },
+        "endDate": { "type": "string", "required": false },
+        "logo": { "type": "string", "required": false },
+        "description": { "type": "string", "required": false }
+      }
     },
     "publication": {
+      "displayLines": [
+        { "field": "title", "type": "title", "order": 1 },
+        { "field": "authors", "type": "subtitle", "order": 2, "italic": true },
+        { "field": "journal", "type": "subtitle", "order": 3, "italic": true },
+        { "field": "doi", "type": "link", "order": 4, "label": "DOI" }
+      ],
+      "dateFormat": "month year",
       "fields": {
-        "title": { "type": "string", "required": true, "display": "title" },
-        "authors": { "type": "string", "required": true, "display": "subtitle" },
-        "journal": { "type": "string", "required": true, "display": "journal" },
-        "month": { "type": "string", "required": true, "display": "date" },
-        "year": { "type": "string", "required": true, "display": "date" },
-        "doi": { "type": "string", "required": false, "display": "link" }
-      },
-      "dateFormat": "month year"
+        "title": { "type": "string", "required": true },
+        "authors": { "type": "string", "required": true },
+        "journal": { "type": "string", "required": true },
+        "month": { "type": "string", "required": true },
+        "year": { "type": "string", "required": true },
+        "doi": { "type": "string", "required": false }
+      }
     },
     "project": {
+      "displayLines": [
+        { "field": "name", "type": "title", "order": 1 },
+        { "field": "description", "type": "description", "order": 2, "markdown": true },
+        { "field": "technologies", "type": "subtitle", "order": 3, "prefix": "Technologies: " },
+        { "field": "link", "type": "link", "order": 4, "label": "Website", "customText": true }
+      ],
+      "dateFormat": "date",
       "fields": {
-        "name": { "type": "string", "required": true, "display": "title" },
-        "description": { "type": "string", "required": false, "display": "description" },
-        "technologies": { "type": "string", "required": false, "display": "subtitle" },
-        "link": { "type": "string", "required": false, "display": "link" },
-        "date": { "type": "string", "required": false, "display": "date" }
-      },
-      "dateFormat": "date"
+        "name": { "type": "string", "required": true },
+        "description": { "type": "string", "required": false },
+        "technologies": { "type": "string", "required": false },
+        "link": { "type": "string", "required": false },
+        "linkText": { "type": "string", "required": false },
+        "date": { "type": "string", "required": false }
+      }
     },
     "award": {
+      "displayLines": [
+        { "field": "title", "type": "title", "order": 1 },
+        { "field": "organization", "type": "subtitle", "order": 2 },
+        { "field": "description", "type": "description", "order": 3, "markdown": true },
+        { "field": "link", "type": "link", "order": 4, "label": "Link", "customText": true }
+      ],
+      "dateFormat": "date",
       "fields": {
-        "title": { "type": "string", "required": true, "display": "title" },
-        "description": { "type": "string", "required": false, "display": "description" },
-        "organization": { "type": "string", "required": true, "display": "subtitle" },
-        "date": { "type": "string", "required": true, "display": "date" },
-        "link": { "type": "string", "required": false, "display": "link" }
-      },
-      "dateFormat": "date"
+        "title": { "type": "string", "required": true },
+        "description": { "type": "string", "required": false },
+        "organization": { "type": "string", "required": true },
+        "date": { "type": "string", "required": true },
+        "link": { "type": "string", "required": false },
+        "linkText": { "type": "string", "required": false }
+      }
     },
     "thesis": {
+      "displayLines": [
+        { "field": "title", "type": "title", "order": 1 },
+        { "field": "author", "type": "subtitle", "order": 2, "italic": true },
+        { "field": "degree", "type": "description", "order": 3 },
+        { "field": "uri", "type": "link", "order": 4, "label": "URI" }
+      ],
+      "dateFormat": "date",
       "fields": {
-        "title": { "type": "string", "required": true, "display": "title" },
-        "author": { "type": "string", "required": true, "display": "subtitle" },
-        "degree": { "type": "string", "required": true, "display": "description" },
-        "date": { "type": "string", "required": true, "display": "date" },
-        "uri": { "type": "string", "required": false, "display": "link" }
-      },
-      "dateFormat": "date"
+        "title": { "type": "string", "required": true },
+        "author": { "type": "string", "required": true },
+        "degree": { "type": "string", "required": true },
+        "date": { "type": "string", "required": true },
+        "uri": { "type": "string", "required": false }
+      }
     },
     "presentation": {
+      "displayLines": [
+        { "field": "title", "type": "title", "order": 1 },
+        { "field": "event", "type": "subtitle", "order": 2 },
+        { "field": "location", "type": "subtitle", "order": 2, "sameLine": true, "prefix": ", " },
+        { "field": "link", "type": "link", "order": 4, "label": "Link", "customText": true }
+      ],
+      "dateFormat": "date",
       "fields": {
-        "title": { "type": "string", "required": true, "display": "title" },
-        "event": { "type": "string", "required": true, "display": "subtitle" },
-        "location": { "type": "string", "required": false, "display": "subtitle-suffix" },
-        "date": { "type": "string", "required": true, "display": "date" },
-        "link": { "type": "string", "required": false, "display": "link" }
-      },
-      "dateFormat": "date"
+        "title": { "type": "string", "required": true },
+        "event": { "type": "string", "required": true },
+        "location": { "type": "string", "required": false },
+        "date": { "type": "string", "required": true },
+        "link": { "type": "string", "required": false },
+        "linkText": { "type": "string", "required": false }
+      }
     },
     "workshop": {
+      "displayLines": [
+        { "field": "title", "type": "title", "order": 1 },
+        { "field": "site", "type": "subtitle", "order": 2 },
+        { "field": "link", "type": "link", "order": 3, "label": "Link", "customText": true }
+      ],
+      "dateFormat": "date",
       "fields": {
-        "title": { "type": "string", "required": true, "display": "title" },
-        "site": { "type": "string", "required": true, "display": "subtitle" },
-        "date": { "type": "string", "required": true, "display": "date" },
-        "link": { "type": "string", "required": false, "display": "link" }
-      },
-      "dateFormat": "date"
+        "title": { "type": "string", "required": true },
+        "site": { "type": "string", "required": true },
+        "date": { "type": "string", "required": true },
+        "link": { "type": "string", "required": false },
+        "linkText": { "type": "string", "required": false }
+      }
     },
     "poster": {
+      "displayLines": [
+        { "field": "title", "type": "title", "order": 1 },
+        { "field": "authors", "type": "subtitle", "order": 2, "italic": true },
+        { "field": "event", "type": "subtitle", "order": 3 },
+        { "field": "location", "type": "subtitle", "order": 3, "sameLine": true, "prefix": ", " },
+        { "field": "link", "type": "link", "order": 5, "label": "Link", "customText": true }
+      ],
+      "dateFormat": "date",
       "fields": {
-        "title": { "type": "string", "required": true, "display": "title" },
-        "authors": { "type": "string", "required": true, "display": "subtitle" },
-        "event": { "type": "string", "required": true, "display": "subtitle-secondary" },
-        "location": { "type": "string", "required": false, "display": "subtitle-suffix" },
-        "date": { "type": "string", "required": true, "display": "date" },
-        "link": { "type": "string", "required": false, "display": "link" }
-      },
-      "dateFormat": "date"
+        "title": { "type": "string", "required": true },
+        "authors": { "type": "string", "required": true },
+        "event": { "type": "string", "required": true },
+        "location": { "type": "string", "required": false },
+        "date": { "type": "string", "required": true },
+        "link": { "type": "string", "required": false },
+        "linkText": { "type": "string", "required": false }
+      }
     },
     "volunteering": {
+      "displayLines": [
+        { "field": "position", "type": "title", "order": 1 },
+        { "field": "organization", "type": "subtitle", "order": 2 },
+        { "field": "description", "type": "description", "order": 3, "markdown": true }
+      ],
+      "dateFormat": "startDate - endDate",
       "fields": {
-        "position": { "type": "string", "required": true, "display": "title" },
-        "organization": { "type": "string", "required": true, "display": "subtitle" },
-        "startDate": { "type": "string", "required": true, "display": "date" },
-        "endDate": { "type": "string", "required": false, "display": "date" },
-        "logo": { "type": "string", "required": false, "display": "logo" },
-        "description": { "type": "string", "required": false, "display": "description" }
-      },
-      "dateFormat": "startDate - endDate"
+        "position": { "type": "string", "required": true },
+        "organization": { "type": "string", "required": true },
+        "startDate": { "type": "string", "required": true },
+        "endDate": { "type": "string", "required": false },
+        "logo": { "type": "string", "required": false },
+        "description": { "type": "string", "required": false }
+      }
     },
     "personal": {
+      "displayLines": [
+        { "field": "description", "type": "description", "order": 1, "markdown": true }
+      ],
       "fields": {
-        "name": { "type": "string", "required": true, "display": "name" },
-        "title": { "type": "string", "required": true, "display": "title" },
-        "profileImage": { "type": "string", "required": false, "display": "image" },
-        "linkedin": { "type": "string", "required": false, "display": "social" },
-        "github": { "type": "string", "required": false, "display": "social" },
-        "orcid": { "type": "string", "required": false, "display": "social" },
-        "website": { "type": "string", "required": false, "display": "social" },
-        "description": { "type": "string", "required": false, "display": "description" }
+        "name": { "type": "string", "required": true },
+        "title": { "type": "string", "required": true },
+        "profileImage": { "type": "string", "required": false },
+        "linkedin": { "type": "string", "required": false },
+        "github": { "type": "string", "required": false },
+        "orcid": { "type": "string", "required": false },
+        "website": { "type": "string", "required": false },
+        "description": { "type": "string", "required": false }
       }
     }
   }

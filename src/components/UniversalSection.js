@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import sectionTypes from '../data/section-types.json';
 import OptimizedImage from './OptimizedImage';
 import { getOrgKeyFromFilename } from '../utils/imageUtils';
+import { renderMarkdown } from '../utils/markdownUtils';
 
 function UniversalSection({ sectionConfig, data }) {
   const { title, itemType, hasLeftAlignedEntries, showTitle, type } = sectionConfig;
   const itemTypeConfig = sectionTypes.itemTypes[itemType];
+  const entryRefs = useRef([]);
+
+  useEffect(() => {
+    // Only check height for list sections
+    if (type === 'list' && Array.isArray(data)) {
+      // Check height of each entry content and add class if tall
+      entryRefs.current.forEach((entryRef, index) => {
+        if (entryRef) {
+          const contentElement = entryRef.querySelector('.entry-content');
+          if (contentElement) {
+            const contentHeight = contentElement.offsetHeight;
+            const threshold = 60; // Height threshold in pixels
+            
+            if (contentHeight > threshold) {
+              entryRef.classList.add('tall-content');
+            } else {
+              entryRef.classList.remove('tall-content');
+            }
+          }
+        }
+      });
+    }
+  }, [data, type]);
 
   if (!data || (Array.isArray(data) && data.length === 0)) {
     return null;
@@ -14,16 +38,21 @@ function UniversalSection({ sectionConfig, data }) {
   // Handle single item sections (like About)
   if (type === 'single') {
     if (itemType === 'personal') {
-      // Special handling for personal/about section
-      if (!data.description) {
+      // Check if we should show the about section
+      if (sectionConfig.showOnlyWithDescription && !data.description) {
         return null;
       }
+      
       return (
         <section id="about">
           {showTitle && <h2>{title}</h2>}
           <div className="entry">
             <div className="entry-content">
-              <p className="entry-description">{data.description}</p>
+              {data.description && (
+                <div className="entry-description">
+                  {renderMarkdown(data.description)}
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -56,115 +85,6 @@ function UniversalSection({ sectionConfig, data }) {
     return null;
   };
 
-  const renderTitle = (item) => {
-    const titleField = Object.entries(itemTypeConfig.fields).find(
-      ([key, config]) => config.display === 'title'
-    );
-    return titleField ? item[titleField[0]] : '';
-  };
-
-  const renderSubtitle = (item) => {
-    const subtitleFields = Object.entries(itemTypeConfig.fields).filter(
-      ([key, config]) => config.display.includes('subtitle')
-    );
-
-    let prefix = '';
-    let main = '';
-    let suffix = '';
-    let secondary = '';
-
-    subtitleFields.forEach(([key, config]) => {
-      if (item[key]) {
-        if (config.display === 'subtitle-prefix') {
-          prefix = item[key];
-        } else if (config.display === 'subtitle') {
-          main = item[key];
-        } else if (config.display === 'subtitle-suffix') {
-          suffix = item[key];
-        } else if (config.display === 'subtitle-secondary') {
-          secondary = item[key];
-        }
-      }
-    });
-
-    let subtitle = '';
-    if (prefix && main) {
-      subtitle = `${prefix} in ${main}`;
-    } else if (main) {
-      subtitle = main;
-    }
-    
-    if (suffix) {
-      subtitle += `, ${suffix}`;
-    }
-    
-    if (secondary) {
-      subtitle += ` - ${secondary}`;
-    }
-
-    return subtitle;
-  };
-
-  const renderDescription = (item) => {
-    const descField = Object.entries(itemTypeConfig.fields).find(
-      ([key, config]) => config.display === 'description'
-    );
-    return descField && item[descField[0]] ? item[descField[0]] : null;
-  };
-
-  const renderJournal = (item) => {
-    if (itemType === 'publication' && item.journal) {
-      const displayJournal = item.journal === "Int J Sports Physiol Perform" 
-        ? "International Journal of Sports Physiology and Performance" 
-        : item.journal;
-      return <p className="entry-subtitle"><em>{displayJournal}</em></p>;
-    }
-    return null;
-  };
-
-  const renderLinks = (item) => {
-    const linkFields = Object.entries(itemTypeConfig.fields).filter(
-      ([key, config]) => config.display === 'link'
-    );
-
-    return linkFields.map(([key, config]) => {
-      if (!item[key]) return null;
-
-      if (key === 'doi') {
-        return (
-          <p key={key} className="entry-description left-aligned-link">
-            <strong>DOI:</strong> <a href={`https://doi.org/${item[key]}`} target="_blank" rel="noopener noreferrer">{item[key]}</a>
-          </p>
-        );
-      }
-
-      if (key === 'link') {
-        let linkText = item[key];
-        let linkLabel = 'Website:';
-        
-        if (itemType === 'project') {
-          linkText = item[key].replace(/^https?:\/\//, '');
-        }
-
-        return (
-          <p key={key} className="entry-description">
-            <strong>{linkLabel}</strong> <a href={item[key]} target="_blank" rel="noopener noreferrer">{linkText}</a>
-          </p>
-        );
-      }
-
-      if (key === 'uri') {
-        return (
-          <p key={key} className="entry-description">
-            <strong>URI:</strong> <a href={item[key]} target="_blank" rel="noopener noreferrer">{item[key]}</a>
-          </p>
-        );
-      }
-
-      return null;
-    }).filter(Boolean);
-  };
-
   const renderLogo = (item) => {
     if (item.logo) {
       const orgKey = getOrgKeyFromFilename(item.logo);
@@ -191,11 +111,172 @@ function UniversalSection({ sectionConfig, data }) {
     return null;
   };
 
-  const renderTechnologies = (item) => {
-    if (item.technologies) {
-      return <p className="entry-subtitle">Technologies: {item.technologies}</p>;
+  const renderDisplayLine = (line, item) => {
+    const fieldValue = item[line.field];
+    if (!fieldValue) return null;
+
+    const prefix = line.prefix || '';
+    const content = prefix + fieldValue;
+
+    switch (line.type) {
+      case 'title':
+        return (
+          <h3 key={line.field} className="entry-title">
+            {content}
+          </h3>
+        );
+
+      case 'subtitle':
+        // Handle special journal name replacement for publications
+        let displayContent = content;
+        if (line.field === 'journal' && fieldValue === "Int J Sports Physiol Perform") {
+          displayContent = prefix + "International Journal of Sports Physiology and Performance";
+        }
+        
+        return (
+          <p 
+            key={line.field} 
+            className="entry-subtitle"
+            style={{ fontStyle: line.italic ? 'italic' : 'normal' }}
+          >
+            {displayContent}
+          </p>
+        );
+
+      case 'description':
+        if (line.markdown) {
+          return (
+            <div key={line.field} className="entry-description">
+              {renderMarkdown(fieldValue)}
+            </div>
+          );
+        } else {
+          return (
+            <p key={line.field} className="entry-description">
+              {content}
+            </p>
+          );
+        }
+
+      case 'link':
+        const linkLabel = line.label || 'Link';
+        let linkText = fieldValue;
+        let linkUrl = fieldValue;
+
+        // Handle custom link text
+        if (line.customText && item[line.field + 'Text']) {
+          linkText = item[line.field + 'Text'];
+        } else if (line.field === 'link' && itemType === 'project') {
+          // Default behavior for project links
+          linkText = fieldValue.replace(/^https?:\/\//, '');
+        }
+
+        // Handle DOI links
+        if (line.field === 'doi') {
+          linkUrl = `https://doi.org/${fieldValue}`;
+        }
+
+        return (
+          <p key={line.field} className="entry-description left-aligned-link">
+            <strong>{linkLabel}:</strong>{' '}
+            <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+              {linkText}
+            </a>
+          </p>
+        );
+
+      default:
+        return null;
     }
-    return null;
+  };
+
+  const renderItemContent = (item) => {
+    if (!itemTypeConfig.displayLines) return null;
+
+    // Group lines by order, handling sameLine items
+    const lineGroups = {};
+    itemTypeConfig.displayLines.forEach(line => {
+      const order = line.order;
+      if (!lineGroups[order]) {
+        lineGroups[order] = [];
+      }
+      lineGroups[order].push(line);
+    });
+
+    // Render each group
+    const renderedGroups = Object.keys(lineGroups)
+      .sort((a, b) => parseInt(a) - parseInt(b))
+      .map(order => {
+        const linesInGroup = lineGroups[order];
+        
+        // Check if we have sameLine items
+        const sameLineItems = linesInGroup.filter(line => line.sameLine);
+        const separateItems = linesInGroup.filter(line => !line.sameLine);
+        
+        const groupElements = [];
+        
+        // If we have sameLine items, combine them with the base item
+        if (sameLineItems.length > 0) {
+          const combinedContent = [];
+          const baseItem = separateItems[0]; // The main item for this order
+          
+          if (baseItem && item[baseItem.field]) {
+            combinedContent.push((baseItem.prefix || '') + item[baseItem.field]);
+          }
+          
+          sameLineItems.forEach(line => {
+            if (item[line.field]) {
+              combinedContent.push((line.prefix || '') + item[line.field]);
+            }
+          });
+          
+          if (combinedContent.length > 0) {
+            const combinedText = combinedContent.join('');
+            const isItalic = baseItem?.italic || sameLineItems.some(line => line.italic);
+            const isTitle = baseItem?.type === 'title';
+            
+            if (isTitle) {
+              groupElements.push(
+                <h3 
+                  key={`combined-${order}`} 
+                  className="entry-title"
+                  style={{ fontStyle: isItalic ? 'italic' : 'normal' }}
+                >
+                  {combinedText}
+                </h3>
+              );
+            } else {
+              groupElements.push(
+                <p 
+                  key={`combined-${order}`} 
+                  className="entry-subtitle"
+                  style={{ fontStyle: isItalic ? 'italic' : 'normal' }}
+                >
+                  {combinedText}
+                </p>
+              );
+            }
+          }
+          
+          // Render remaining separate items (excluding the base item that was combined)
+          separateItems.slice(1).forEach(line => {
+            const rendered = renderDisplayLine(line, item);
+            if (rendered) groupElements.push(rendered);
+          });
+        } else {
+          // No sameLine items, render all separate items
+          separateItems.forEach(line => {
+            const rendered = renderDisplayLine(line, item);
+            if (rendered) groupElements.push(rendered);
+          });
+        }
+        
+        return groupElements;
+      })
+      .flat()
+      .filter(Boolean);
+
+    return renderedGroups;
   };
 
   const sectionId = title.toLowerCase().replace(/\s+/g, '-');
@@ -205,17 +286,13 @@ function UniversalSection({ sectionConfig, data }) {
       {showTitle && <h2>{title}</h2>}
       {data.map((item, index) => (
         <div 
+          ref={el => entryRefs.current[index] = el}
           className={`entry ${hasLeftAlignedEntries ? 'left-aligned-entry' : ''}`} 
           key={index}
         >
           {renderLogo(item)}
           <div className="entry-content">
-            <h3 className="entry-title">{renderTitle(item)}</h3>
-            <p className="entry-subtitle">{renderSubtitle(item)}</p>
-            {renderJournal(item)}
-            {renderDescription(item) && <p className="entry-description">{renderDescription(item)}</p>}
-            {renderTechnologies(item)}
-            {renderLinks(item)}
+            {renderItemContent(item)}
           </div>
           {renderDate(item) && <span className="entry-date">{renderDate(item)}</span>}
         </div>
