@@ -25,11 +25,11 @@ async function generatePDF() {
     
     const page = await browser.newPage();
     
-    // Set desktop viewport for consistent rendering (no responsive)
+    // Set smaller viewport for PDF rendering with reduced scale
     await page.setViewport({
-      width: 1200,
-      height: 1600,
-      deviceScaleFactor: 1
+      width: 900,
+      height: 1200,
+      deviceScaleFactor: 0.6
     });
 
     // Navigate to the local development server or build
@@ -129,46 +129,65 @@ async function generatePDF() {
           margin-bottom: 15px;
         }
         
-        /* PDF-specific font size reductions */
+        /* Exact 1:1 font sizes matching web */
         .header-center h1 {
-          font-size: 20px !important;
+          font-size: 24px !important;
         }
         
         .header-subtitle {
-          font-size: 15px !important;
+          font-size: 18px !important;
         }
         
         h2 {
-          font-size: 15px !important;
-          border-bottom: 0.5px solid #000 !important;
-        }
-        
-        .header-divider {
-          border-top: 0.5px solid #000 !important;
+          font-size: 18px !important;
+          border-bottom: none !important;
+          position: relative;
         }
         
         .entry-title {
-          font-size: 14px !important;
+          font-size: 16px !important;
         }
         
         .entry-subtitle {
-          font-size: 13px !important;
+          font-size: 16px !important;
         }
         
         .entry-description {
-          font-size: 12px !important;
+          font-size: 15px !important;
         }
         
         .entry-date {
-          font-size: 12px !important;
+          font-size: 15px !important;
         }
         
         .social-links a {
-          font-size: 11px !important;
+          font-size: 15px !important;
         }
         
         p {
-          font-size: 12px !important;
+          font-size: 16px !important;
+        }
+        
+        .markdown-content p {
+          font-size: 16px !important;
+        }
+        
+        /* Ultra-thin lines */
+        h2::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 0.3px;
+          background: #000;
+        }
+        
+        .header-divider {
+          border: none !important;
+          height: 0.3px !important;
+          background: #000 !important;
+          margin: 5px auto !important;
         }
         
         /* Keep links without underline like the website */
@@ -184,9 +203,10 @@ async function generatePDF() {
 
     console.log('📋 Generating PDF...');
     
-    // Generate PDF with A4 format
+    // Generate PDF with A4 format and reduced scale
     const pdfBuffer = await page.pdf({
       format: 'A4',
+      scale: 0.8,
       margin: {
         top: '0mm',
         right: '0mm', 
