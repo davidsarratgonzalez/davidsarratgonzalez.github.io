@@ -9,10 +9,14 @@ import aboutData from './data/about.json';
 function App() {
   const [sectionsData, setSectionsData] = useState({});
   const [loading, setLoading] = useState(true);
+  
+  // Detect PDF mode
+  const isPDFMode = new URLSearchParams(window.location.search).get('pdf') === 'true';
 
   useEffect(() => {
-    document.title = resumeConfig.title || `${aboutData.name}`;
-  }, []);
+    const title = isPDFMode ? `${aboutData.name} - Resume` : (resumeConfig.title || `${aboutData.name}`);
+    document.title = title;
+  }, [isPDFMode]);
 
   useEffect(() => {
     const loadSectionData = async () => {
@@ -65,7 +69,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${isPDFMode ? 'pdf-mode' : ''}`}>
       <Header />
       <main>
         {renderSections()}

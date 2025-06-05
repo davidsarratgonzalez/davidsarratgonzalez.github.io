@@ -17,9 +17,11 @@
     "start": "react-scripts start",
     "prebuild": "node scripts/build-images.js",
     "build": "react-scripts build",
+    "build-only": "react-scripts build",
+    "build:pdf": "node scripts/build-with-pdf.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:pdf",
     "deploy": "gh-pages -d build",
     "build:images": "node scripts/build-images.js"
   },
@@ -42,9 +44,11 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "sharp": "^0.33.2",
     "favicons": "^7.2.0",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+    "gh-pages": "^6.1.1",
+    "puppeteer": "^24.10.0",
+    "serve": "^14.2.4",
+    "sharp": "^0.33.2"
   }
 }

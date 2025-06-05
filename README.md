@@ -7,6 +7,7 @@ This project showcases my professional experience, education, projects, publicat
 - **Minimalistic design**: Clean and simple layout to highlight the most important information.
 - **Responsive**: Fully responsive design that works seamlessly on both desktop and mobile devices.
 - **Easy to update**: All the information displayed on the website can be easily modified through JSON files located in the `src/data` directory.
+- **PDF Generation**: Automatically generates A4-formatted PDF resumes with text-selectable content.
 
 ## Demo
 
@@ -56,6 +57,20 @@ npm run build
 
 This will generate a `build` directory with the optimized production files.
 
+### Building with PDF Generation
+
+To create a production build that also generates a PDF resume, run:
+
+```bash
+npm run build:pdf
+```
+
+This will:
+1. Build optimized images
+2. Create the production build
+3. Generate an A4-formatted PDF resume
+4. Save the PDF as `build/[name]_resume.pdf`
+
 ### Deploying to GitHub Pages
 
 This project is configured to deploy directly to GitHub Pages. To deploy the website, run:
@@ -64,7 +79,7 @@ This project is configured to deploy directly to GitHub Pages. To deploy the web
 npm run deploy
 ```
 
-This will build the project and push the contents of the `build` directory to the `gh-pages` branch of your repository.
+This will build the project (including PDF generation) and push the contents of the `build` directory to the `gh-pages` branch of your repository.
 
 ## Modifying the content
 
@@ -354,6 +369,30 @@ You can also override this per component:
   className="profile-image" 
 />
 ```
+
+## PDF Generation
+
+This project includes an advanced PDF generation system that creates professional A4-formatted resumes with text-selectable content (not images). The PDF is automatically generated during the build process and uses the person's name from the configuration for the filename.
+
+### Key Features
+
+- **Real PDF with selectable text** using Puppeteer
+- **A4 format** with optimized margins and typography
+- **Dynamic filename** based on person's name from `about.json`
+- **Integrated with deployment** process
+- **Print-optimized styling** while maintaining visual consistency
+- **Professional formatting** with proper page breaks and font sizing
+
+### Usage
+
+Generate PDF only:
+```bash
+npm run build:pdf
+```
+
+The PDF will be saved as `build/[firstname_lastname]_resume.pdf`.
+
+For complete documentation about PDF generation, configuration, and troubleshooting, see [PDF Generation Documentation](PDF-GENERATION.md).
 
 ## License
 
