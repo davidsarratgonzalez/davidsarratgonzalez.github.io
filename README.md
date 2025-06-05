@@ -70,6 +70,198 @@ This will build the project and push the contents of the `build` directory to th
 
 All the content displayed on the website can be modified through JSON files located in the `src/data` directory. Simply update the relevant JSON file with your information, and the website will reflect the changes.
 
+## Configurable Resume System
+
+This application uses a fully configurable JSON-based system for managing resume sections. This allows you to easily customize the content, order, and types of sections without modifying the React components.
+
+### Configuration Files Overview
+
+#### 1. `src/data/section-types.json`
+Defines the different types of resume items and their field schemas. Each item type specifies:
+- Field names and types
+- Which fields are required
+- How fields should be displayed (title, subtitle, date, link, etc.)
+- Date formatting rules
+
+#### 2. `src/data/sections-config.json`
+Configures each section's properties:
+- Section title
+- Data source file
+- Item type to use
+- Visual styling options
+- Whether the section is enabled
+
+#### 3. `src/data/resume-config.json`
+Master configuration file that controls:
+- Section order
+- Global settings
+- Application title
+
+### Supported Item Types
+
+#### Job/Experience Items
+```json
+{
+  "jobTitle": "string",
+  "company": "string", 
+  "startDate": "string",
+  "endDate": "string (optional)",
+  "logo": "string (optional)",
+  "description": "string (optional)"
+}
+```
+
+#### Education Items
+```json
+{
+  "degree": "string",
+  "fieldOfStudy": "string",
+  "university": "string",
+  "startDate": "string",
+  "endDate": "string (optional)",
+  "logo": "string (optional)",
+  "description": "string (optional)"
+}
+```
+
+#### Publication Items
+```json
+{
+  "title": "string",
+  "authors": "string",
+  "journal": "string",
+  "month": "string",
+  "year": "string",
+  "doi": "string (optional)"
+}
+```
+
+#### Project Items
+```json
+{
+  "name": "string",
+  "description": "string (optional)",
+  "technologies": "string (optional)",
+  "link": "string (optional)",
+  "date": "string (optional)"
+}
+```
+
+#### Award Items
+```json
+{
+  "title": "string",
+  "description": "string (optional)",
+  "organization": "string",
+  "date": "string",
+  "link": "string (optional)"
+}
+```
+
+#### Thesis Items
+```json
+{
+  "title": "string",
+  "author": "string",
+  "degree": "string",
+  "date": "string",
+  "uri": "string (optional)"
+}
+```
+
+#### Presentation Items
+```json
+{
+  "title": "string",
+  "event": "string",
+  "location": "string (optional)",
+  "date": "string",
+  "link": "string (optional)"
+}
+```
+
+#### Workshop Items
+```json
+{
+  "title": "string",
+  "site": "string",
+  "date": "string",
+  "link": "string (optional)"
+}
+```
+
+#### Poster Items
+```json
+{
+  "title": "string",
+  "authors": "string",
+  "event": "string",
+  "location": "string (optional)",
+  "date": "string",
+  "link": "string (optional)"
+}
+```
+
+#### Volunteering Items
+```json
+{
+  "position": "string",
+  "organization": "string",
+  "startDate": "string",
+  "endDate": "string (optional)",
+  "logo": "string (optional)",
+  "description": "string (optional)"
+}
+```
+
+#### Personal Info
+```json
+{
+  "name": "string",
+  "title": "string",
+  "profileImage": "string (optional)",
+  "linkedin": "string (optional)",
+  "github": "string (optional)",
+  "orcid": "string (optional)",
+  "website": "string (optional)",
+  "description": "string (optional)"
+}
+```
+
+### How to Customize
+
+#### Adding a New Section
+1. Create a JSON data file in `src/data/`
+2. Add a section configuration in `src/data/sections-config.json`
+3. Add the section key to the `sectionOrder` array in `src/data/resume-config.json`
+
+#### Reordering Sections
+Simply rearrange the section keys in the `sectionOrder` array in `src/data/resume-config.json`.
+
+#### Disabling a Section
+Set `"enabled": false` in the section's configuration in `src/data/sections-config.json`.
+
+#### Creating a New Item Type
+1. Add the new item type definition to `src/data/section-types.json`
+2. Create corresponding data files
+3. Update sections configuration to use the new item type
+
+### Visual Customization
+
+The system maintains all existing CSS styles and visual appearance. Special styling options include:
+
+- `hasLeftAlignedEntries`: Adds left-aligned styling for sections like Experience and Education
+- `showTitle`: Controls whether the section title is displayed
+- `showInHeader`: For special sections like About that appear in the header
+
+### Benefits
+
+- **Easy Content Management**: Update resume content by editing JSON files
+- **Flexible Structure**: Add new sections or item types without touching React components
+- **Consistent Styling**: All sections use the same visual patterns automatically
+- **Maintainable**: Clear separation between data, configuration, and presentation logic
+- **Future-Proof**: Easy to extend with new features or section types
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.

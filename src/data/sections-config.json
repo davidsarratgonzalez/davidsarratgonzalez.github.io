@@ -1,0 +1,107 @@
+{
+  "sections": {
+    "about": {
+      "title": "About Me",
+      "type": "single",
+      "itemType": "personal",
+      "dataSource": "about.json",
+      "component": "About",
+      "enabled": true,
+      "showTitle": false,
+      "showInHeader": true
+    },
+    "experience": {
+      "title": "Work Experience",
+      "type": "list",
+      "itemType": "job",
+      "dataSource": "experience.json",
+      "component": "Experience",
+      "enabled": true,
+      "showTitle": true,
+      "hasLeftAlignedEntries": true
+    },
+    "education": {
+      "title": "Education",
+      "type": "list",
+      "itemType": "education",
+      "dataSource": "education.json",
+      "component": "Education",
+      "enabled": true,
+      "showTitle": true,
+      "hasLeftAlignedEntries": true
+    },
+    "projects": {
+      "title": "Projects",
+      "type": "list",
+      "itemType": "project",
+      "dataSource": "projects.json",
+      "component": "Projects",
+      "enabled": true,
+      "showTitle": true
+    },
+    "publications": {
+      "title": "Publications",
+      "type": "list",
+      "itemType": "publication",
+      "dataSource": "publications.json",
+      "component": "Publications",
+      "enabled": true,
+      "showTitle": true
+    },
+    "presentations": {
+      "title": "Presentations",
+      "type": "list",
+      "itemType": "presentation",
+      "dataSource": "presentations.json",
+      "component": "Presentations",
+      "enabled": true,
+      "showTitle": true
+    },
+    "workshops": {
+      "title": "Workshops",
+      "type": "list",
+      "itemType": "workshop",
+      "dataSource": "workshops.json",
+      "component": "Workshops",
+      "enabled": true,
+      "showTitle": true
+    },
+    "posters": {
+      "title": "Posters",
+      "type": "list",
+      "itemType": "poster",
+      "dataSource": "posters.json",
+      "component": "Posters",
+      "enabled": true,
+      "showTitle": true
+    },
+    "theses": {
+      "title": "Theses",
+      "type": "list",
+      "itemType": "thesis",
+      "dataSource": "theses.json",
+      "component": "Theses",
+      "enabled": true,
+      "showTitle": true
+    },
+    "awards": {
+      "title": "Awards",
+      "type": "list",
+      "itemType": "award",
+      "dataSource": "awards.json",
+      "component": "Awards",
+      "enabled": true,
+      "showTitle": true
+    },
+    "volunteering": {
+      "title": "Volunteering",
+      "type": "list",
+      "itemType": "volunteering",
+      "dataSource": "volunteering.json",
+      "component": "Volunteering",
+      "enabled": true,
+      "showTitle": true,
+      "hasLeftAlignedEntries": false
+    }
+  }
+} 

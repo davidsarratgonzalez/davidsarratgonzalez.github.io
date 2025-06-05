@@ -1,0 +1,21 @@
+{
+  "title": "David Sarrat González - Resume",
+  "sectionOrder": [
+    "about",
+    "experience", 
+    "education",
+    "projects",
+    "publications",
+    "presentations",
+    "workshops",
+    "posters",
+    "theses",
+    "awards",
+    "volunteering"
+  ],
+  "settings": {
+    "showSectionNumbers": false,
+    "compactMode": false,
+    "theme": "default"
+  }
+} 

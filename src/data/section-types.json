@@ -1,0 +1,121 @@
+{
+  "itemTypes": {
+    "job": {
+      "fields": {
+        "jobTitle": { "type": "string", "required": true, "display": "title" },
+        "company": { "type": "string", "required": true, "display": "subtitle" },
+        "startDate": { "type": "string", "required": true, "display": "date" },
+        "endDate": { "type": "string", "required": false, "display": "date" },
+        "logo": { "type": "string", "required": false, "display": "logo" },
+        "description": { "type": "string", "required": false, "display": "description" }
+      },
+      "dateFormat": "startDate - endDate"
+    },
+    "education": {
+      "fields": {
+        "degree": { "type": "string", "required": true, "display": "title" },
+        "fieldOfStudy": { "type": "string", "required": true, "display": "subtitle-prefix" },
+        "university": { "type": "string", "required": true, "display": "subtitle" },
+        "startDate": { "type": "string", "required": true, "display": "date" },
+        "endDate": { "type": "string", "required": false, "display": "date" },
+        "logo": { "type": "string", "required": false, "display": "logo" },
+        "description": { "type": "string", "required": false, "display": "description" }
+      },
+      "dateFormat": "startDate - endDate"
+    },
+    "publication": {
+      "fields": {
+        "title": { "type": "string", "required": true, "display": "title" },
+        "authors": { "type": "string", "required": true, "display": "subtitle" },
+        "journal": { "type": "string", "required": true, "display": "journal" },
+        "month": { "type": "string", "required": true, "display": "date" },
+        "year": { "type": "string", "required": true, "display": "date" },
+        "doi": { "type": "string", "required": false, "display": "link" }
+      },
+      "dateFormat": "month year"
+    },
+    "project": {
+      "fields": {
+        "name": { "type": "string", "required": true, "display": "title" },
+        "description": { "type": "string", "required": false, "display": "description" },
+        "technologies": { "type": "string", "required": false, "display": "subtitle" },
+        "link": { "type": "string", "required": false, "display": "link" },
+        "date": { "type": "string", "required": false, "display": "date" }
+      },
+      "dateFormat": "date"
+    },
+    "award": {
+      "fields": {
+        "title": { "type": "string", "required": true, "display": "title" },
+        "description": { "type": "string", "required": false, "display": "description" },
+        "organization": { "type": "string", "required": true, "display": "subtitle" },
+        "date": { "type": "string", "required": true, "display": "date" },
+        "link": { "type": "string", "required": false, "display": "link" }
+      },
+      "dateFormat": "date"
+    },
+    "thesis": {
+      "fields": {
+        "title": { "type": "string", "required": true, "display": "title" },
+        "author": { "type": "string", "required": true, "display": "subtitle" },
+        "degree": { "type": "string", "required": true, "display": "description" },
+        "date": { "type": "string", "required": true, "display": "date" },
+        "uri": { "type": "string", "required": false, "display": "link" }
+      },
+      "dateFormat": "date"
+    },
+    "presentation": {
+      "fields": {
+        "title": { "type": "string", "required": true, "display": "title" },
+        "event": { "type": "string", "required": true, "display": "subtitle" },
+        "location": { "type": "string", "required": false, "display": "subtitle-suffix" },
+        "date": { "type": "string", "required": true, "display": "date" },
+        "link": { "type": "string", "required": false, "display": "link" }
+      },
+      "dateFormat": "date"
+    },
+    "workshop": {
+      "fields": {
+        "title": { "type": "string", "required": true, "display": "title" },
+        "site": { "type": "string", "required": true, "display": "subtitle" },
+        "date": { "type": "string", "required": true, "display": "date" },
+        "link": { "type": "string", "required": false, "display": "link" }
+      },
+      "dateFormat": "date"
+    },
+    "poster": {
+      "fields": {
+        "title": { "type": "string", "required": true, "display": "title" },
+        "authors": { "type": "string", "required": true, "display": "subtitle" },
+        "event": { "type": "string", "required": true, "display": "subtitle-secondary" },
+        "location": { "type": "string", "required": false, "display": "subtitle-suffix" },
+        "date": { "type": "string", "required": true, "display": "date" },
+        "link": { "type": "string", "required": false, "display": "link" }
+      },
+      "dateFormat": "date"
+    },
+    "volunteering": {
+      "fields": {
+        "position": { "type": "string", "required": true, "display": "title" },
+        "organization": { "type": "string", "required": true, "display": "subtitle" },
+        "startDate": { "type": "string", "required": true, "display": "date" },
+        "endDate": { "type": "string", "required": false, "display": "date" },
+        "logo": { "type": "string", "required": false, "display": "logo" },
+        "description": { "type": "string", "required": false, "display": "description" }
+      },
+      "dateFormat": "startDate - endDate"
+    },
+    "personal": {
+      "fields": {
+        "name": { "type": "string", "required": true, "display": "name" },
+        "title": { "type": "string", "required": true, "display": "title" },
+        "profileImage": { "type": "string", "required": false, "display": "image" },
+        "linkedin": { "type": "string", "required": false, "display": "social" },
+        "github": { "type": "string", "required": false, "display": "social" },
+        "orcid": { "type": "string", "required": false, "display": "social" },
+        "website": { "type": "string", "required": false, "display": "social" },
+        "description": { "type": "string", "required": false, "display": "description" }
+      }
+    }
+  }
+} 
