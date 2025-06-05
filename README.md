@@ -262,6 +262,73 @@ The system maintains all existing CSS styles and visual appearance. Special styl
 - **Maintainable**: Clear separation between data, configuration, and presentation logic
 - **Future-Proof**: Easy to extend with new features or section types
 
+## Image Management System
+
+The application includes an advanced image management system that automatically optimizes images and generates favicons during the build process.
+
+### Features
+
+- **Automatic Image Optimization**: Profile images are generated in multiple sizes and formats
+- **WebP Support**: Modern browsers get WebP images for better performance
+- **Favicon Generation**: Automatically generates all necessary favicon sizes and formats
+- **Lazy Loading**: Images load only when needed to improve performance
+- **Responsive Images**: Different image sizes for different use cases
+
+### Image Configuration
+
+Images are configured in `src/data/images-config.json`:
+
+- **Profile Images**: Automatically generated in thumbnail (150x150), medium (300x300), and large (600x600) sizes
+- **Circular Images**: Optional circular/round styling for profile images (configurable)
+- **Organization Logos**: Optimized with configurable quality settings
+- **Favicons**: Generated from the profile image in all required sizes and formats
+
+### Build Process
+
+The image optimization runs automatically before each build:
+
+```bash
+npm run build        # Builds images then the app
+npm run build:images # Builds images only
+```
+
+### Generated Assets
+
+- **Profile images**: `david-thumbnail.jpeg`, `david-medium.jpeg`, `david-large.jpeg`, and WebP versions
+- **Favicons**: Complete set of favicons in `/public/favicons/` and root compatibility files
+- **Optimized logos**: All organization logos are compressed for better performance
+
+### Adding New Images
+
+1. Add the image file to `/public/images/`
+2. Update `src/data/images-config.json` with the new image configuration
+3. Run `npm run build:images` to optimize the new image
+
+### Configuring Circular Profile Images
+
+To make the profile image circular/round, set the `circular` option in `src/data/images-config.json`:
+
+```json
+{
+  "profile": {
+    "source": "profile.jpg",
+    "circular": true,
+    "sizes": { ... }
+  }
+}
+```
+
+You can also override this per component:
+
+```jsx
+<OptimizedImage 
+  type="profile" 
+  size="medium" 
+  circular={true}
+  className="profile-image" 
+/>
+```
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.

@@ -207,6 +207,58 @@ a:hover {
   text-align: left;
 }
 
+/* Optimized Image Component Styles */
+.optimized-image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.optimized-image {
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.optimized-image.loaded {
+  opacity: 1;
+}
+
+.image-loading-placeholder,
+.image-error-placeholder,
+.image-placeholder {
+  font-size: 12px;
+  color: #999;
+  user-select: none;
+}
+
+/* Profile image specific styles */
+.profile-image .optimized-image-container {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+
+/* Circular image styles */
+.optimized-image-container.circular {
+  border-radius: 50%;
+}
+
+.optimized-image.circular {
+  border-radius: 50%;
+}
+
+.image-loading-placeholder.circular,
+.image-error-placeholder.circular,
+.image-placeholder.circular {
+  border-radius: 50%;
+}
+
+/* Entry logo specific styles */
+.entry-logo .optimized-image-container {
+  width: 50px;
+  height: 50px;
+}
+
 @media (max-width: 768px) {
   .App {
     padding-bottom: 0;

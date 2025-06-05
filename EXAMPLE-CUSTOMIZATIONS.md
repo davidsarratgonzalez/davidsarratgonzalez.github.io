@@ -189,6 +189,65 @@ You can extend the system to support different themes by adding theme-specific c
 }
 ```
 
+## Example 6: Changing Profile Image Style
+
+You can easily switch between circular and rectangular profile images by updating the configuration:
+
+### Make Profile Image Circular
+```json
+// In src/data/images-config.json
+{
+  "profile": {
+    "source": "david.jpeg",
+    "circular": true,
+    "sizes": {
+      "thumbnail": "150x150",
+      "medium": "300x300", 
+      "large": "600x600"
+    }
+  }
+}
+```
+
+### Keep Profile Image Rectangular (Current Default)
+```json
+// In src/data/images-config.json
+{
+  "profile": {
+    "source": "david.jpeg",
+    "circular": false,
+    "sizes": {
+      "thumbnail": "150x150",
+      "medium": "300x300", 
+      "large": "600x600"
+    }
+  }
+}
+```
+
+### Override Per Component
+You can also override the circular setting for individual image instances:
+
+```jsx
+// Force circular regardless of config
+<OptimizedImage 
+  type="profile" 
+  size="medium" 
+  circular={true}
+  className="profile-image" 
+/>
+
+// Force rectangular regardless of config
+<OptimizedImage 
+  type="profile" 
+  size="medium" 
+  circular={false}
+  className="profile-image" 
+/>
+```
+
+This gives you maximum flexibility to use different styles in different contexts while maintaining a consistent default behavior.
+
 ## Benefits of This Approach
 
 1. **No Code Changes**: All customizations are done through JSON configuration

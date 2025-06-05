@@ -1,5 +1,7 @@
 import React from 'react';
 import sectionTypes from '../data/section-types.json';
+import OptimizedImage from './OptimizedImage';
+import { getOrgKeyFromFilename } from '../utils/imageUtils';
 
 function UniversalSection({ sectionConfig, data }) {
   const { title, itemType, hasLeftAlignedEntries, showTitle, type } = sectionConfig;
@@ -165,13 +167,26 @@ function UniversalSection({ sectionConfig, data }) {
 
   const renderLogo = (item) => {
     if (item.logo) {
-      return (
-        <img
-          src={`/images/${item.logo}`}
-          alt={`${item.company || item.university || 'Organization'} logo`}
-          className="entry-logo"
-        />
-      );
+      const orgKey = getOrgKeyFromFilename(item.logo);
+      
+      if (orgKey) {
+        return (
+          <OptimizedImage
+            type="logo"
+            orgKey={orgKey}
+            className="entry-logo"
+          />
+        );
+      } else {
+        // Fallback for logos not in config
+        return (
+          <img
+            src={`/images/${item.logo}`}
+            alt={`${item.company || item.university || 'Organization'} logo`}
+            className="entry-logo"
+          />
+        );
+      }
     }
     return null;
   };

@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutData from '../data/about.json';
+import OptimizedImage from './OptimizedImage';
 
 function Header() {
   const socialLinks = {
@@ -35,10 +36,11 @@ function Header() {
     <header className="header-container">
       <div className="header-left">
         {aboutData.profileImage && (
-          <img
-            src={`/images/${aboutData.profileImage}`}
-            alt={`${aboutData.name}'s profile`}
+          <OptimizedImage
+            type="profile"
+            size="medium"
             className="profile-image"
+            loading="eager"
           />
         )}
       </div>

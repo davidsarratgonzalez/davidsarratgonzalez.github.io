@@ -1,0 +1,70 @@
+{
+  "profile": {
+    "source": "david.jpeg",
+    "alt": "David Sarrat González's profile photo",
+    "sizes": {
+      "thumbnail": "150x150",
+      "medium": "300x300",
+      "large": "600x600"
+    },
+    "formats": ["jpeg", "webp"],
+    "quality": 85,
+    "circular": false
+  },
+  "favicon": {
+    "source": "david.jpeg",
+    "sizes": [16, 32, 48, 64, 128, 192, 384],
+    "formats": ["ico", "png"],
+    "background": "#ffffff"
+  },
+  "logos": {
+    "organizations": {
+      "isglobal": {
+        "source": "isglobal.jpeg",
+        "alt": "Barcelona Institute for Global Health (ISGlobal) logo",
+        "quality": 80
+      },
+      "udl": {
+        "source": "udl.jpeg", 
+        "alt": "Universitat de Lleida logo",
+        "quality": 80
+      },
+      "uab": {
+        "source": "uab.jpeg",
+        "alt": "Universitat Autònoma de Barcelona logo", 
+        "quality": 80
+      },
+      "uoc": {
+        "source": "uoc.jpeg",
+        "alt": "Universitat Oberta de Catalunya logo",
+        "quality": 80
+      },
+      "diputaciolleida": {
+        "source": "diputaciolleida.jpeg",
+        "alt": "Diputació de Lleida logo",
+        "quality": 80
+      },
+      "aulatecnica": {
+        "source": "aulatecnica.jpeg",
+        "alt": "Aula Técnica logo",
+        "quality": 80
+      },
+      "iaeste": {
+        "source": "iaeste.jpeg",
+        "alt": "IAESTE LC Lleida logo",
+        "quality": 80
+      },
+      "lleidahack": {
+        "source": "lleidahack.jpeg",
+        "alt": "LleidaHack logo",
+        "quality": 80
+      }
+    }
+  },
+  "settings": {
+    "basePath": "/images/",
+    "lazyLoading": true,
+    "webpSupport": true,
+    "retina": true
+  }
+} 
