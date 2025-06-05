@@ -9,10 +9,12 @@ async function generatePDF() {
     const aboutData = JSON.parse(await fs.readFile(aboutPath, 'utf8'));
     const personName = aboutData.name || 'Resume';
     
-    // Create safe filename (remove special characters)
+    // Create safe filename (convert accents to ASCII and remove special characters)
     const safeFileName = personName
-      .replace(/[^a-zA-Z0-9\s-]/g, '')
-      .replace(/\s+/g, '_')
+      .normalize('NFD')                    // Decompose accented characters (á → a + ´)
+      .replace(/[\u0300-\u036f]/g, '')     // Remove diacritical marks
+      .replace(/[^a-zA-Z0-9\s-]/g, '')     // Remove remaining special characters
+      .replace(/\s+/g, '_')                // Replace spaces with underscores
       .toLowerCase();
 
     console.log(`🚀 Generating PDF for: ${personName}`);
@@ -108,7 +110,7 @@ async function generatePDF() {
         .App {
           margin: 0 !important;
           max-width: none !important;
-          padding: 15mm 20mm 15mm 20mm !important;
+          padding: 15mm 20mm 0mm 20mm !important;
         }
         
         /* Allow page breaks between entries */
