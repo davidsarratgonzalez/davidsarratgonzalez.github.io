@@ -129,6 +129,48 @@ async function generatePDF() {
           margin-bottom: 15px;
         }
         
+        /* PDF-specific font size reductions */
+        .header-center h1 {
+          font-size: 20px !important;
+        }
+        
+        .header-subtitle {
+          font-size: 15px !important;
+        }
+        
+        h2 {
+          font-size: 15px !important;
+          border-bottom: 0.5px solid #000 !important;
+        }
+        
+        .header-divider {
+          border-top: 0.5px solid #000 !important;
+        }
+        
+        .entry-title {
+          font-size: 14px !important;
+        }
+        
+        .entry-subtitle {
+          font-size: 13px !important;
+        }
+        
+        .entry-description {
+          font-size: 12px !important;
+        }
+        
+        .entry-date {
+          font-size: 12px !important;
+        }
+        
+        .social-links a {
+          font-size: 11px !important;
+        }
+        
+        p {
+          font-size: 12px !important;
+        }
+        
         /* Keep links without underline like the website */
         a {
           text-decoration: none !important;
