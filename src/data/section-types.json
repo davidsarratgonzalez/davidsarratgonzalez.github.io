@@ -38,7 +38,7 @@
       "displayLines": [
         { "field": "title", "type": "title", "order": 1 },
         { "field": "authors", "type": "subtitle", "order": 2, "italic": true },
-        { "field": "journal", "type": "subtitle", "order": 3, "italic": true },
+        { "field": "journal", "type": "subtitle", "order": 3 },
         { "field": "doi", "type": "link", "order": 4, "label": "DOI" }
       ],
       "dateFormat": "month year",
@@ -71,7 +71,7 @@
     "award": {
       "displayLines": [
         { "field": "title", "type": "title", "order": 1 },
-        { "field": "organization", "type": "subtitle", "order": 2 },
+        { "field": "organization", "type": "subtitle", "order": 2, "italic": true },
         { "field": "description", "type": "description", "order": 3, "markdown": true },
         { "field": "link", "type": "link", "order": 4, "label": "Link", "customText": true }
       ],
