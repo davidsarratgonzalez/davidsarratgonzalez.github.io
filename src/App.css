@@ -150,22 +150,30 @@ h2 {
   flex-wrap: nowrap;
 }
 
-/* Logo centered for short content */
-.entry:not(.tall-content) {
-  align-items: center;
+/* Entry content is centered vertically */
+.entry-content {
+  align-self: center;
 }
 
-/* Logo at top for tall content */
-.entry.tall-content {
-  align-items: flex-start;
+/* Date stays at top right */
+.entry-date {
+  align-self: flex-start;
 }
 
+/* Logo stays at top with small top margin */
 .entry-logo {
   width: 50px;
   height: 50px;
   margin-right: 10px;
+  margin-top: 2px;
   flex-shrink: 0;
+  align-self: flex-start;
+}
+
+/* When content is small, center logo with content */
+.entry.small-content .entry-logo {
   align-self: center;
+  margin-top: 0;
 }
 
 .entry-content {
@@ -175,6 +183,7 @@ h2 {
   justify-content: center;
   min-width: 0;
   overflow-wrap: break-word;
+  align-self: center;
 }
 
 .entry-title,

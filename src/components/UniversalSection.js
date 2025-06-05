@@ -12,24 +12,32 @@ function UniversalSection({ sectionConfig, data }) {
   useEffect(() => {
     // Only check height for list sections
     if (type === 'list' && Array.isArray(data)) {
-      // Check height of each entry content and add class if tall
-      entryRefs.current.forEach((entryRef, index) => {
+      entryRefs.current.forEach((entryRef) => {
         if (entryRef) {
+          const logoElement = entryRef.querySelector('.entry-logo');
           const contentElement = entryRef.querySelector('.entry-content');
-          if (contentElement) {
+          
+          if (logoElement && contentElement) {
+            const logoHeight = logoElement.offsetHeight;
             const contentHeight = contentElement.offsetHeight;
-            const threshold = 60; // Height threshold in pixels
+            const heightDifference = contentHeight - logoHeight;
+            const threshold = 20; // If content is only 20px taller than logo, center it
             
-            if (contentHeight > threshold) {
-              entryRef.classList.add('tall-content');
-            } else {
-              entryRef.classList.remove('tall-content');
+            // Remove existing class
+            entryRef.classList.remove('small-content');
+            
+            if (heightDifference <= threshold) {
+              // Content is not much taller than logo - center logo with content
+              entryRef.classList.add('small-content');
             }
+            // Otherwise logo stays at top (when content is significantly taller)
           }
         }
       });
     }
   }, [data, type]);
+
+
 
   if (!data || (Array.isArray(data) && data.length === 0)) {
     return null;
