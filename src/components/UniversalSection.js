@@ -171,8 +171,11 @@ function UniversalSection({ sectionConfig, data }) {
         let linkText = fieldValue;
         let linkUrl = fieldValue;
 
-        // Handle custom link text
-        if (line.customText && item[line.field + 'Text']) {
+        // Handle custom link text - check for fieldText (like uriText, linkText, etc.)
+        const customTextField = line.field + 'Text';
+        if (item[customTextField]) {
+          linkText = item[customTextField];
+        } else if (line.customText && item[line.field + 'Text']) {
           linkText = item[line.field + 'Text'];
         } else if (line.field === 'link' && itemType === 'project') {
           // Default behavior for project links

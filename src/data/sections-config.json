@@ -77,7 +77,7 @@
       "showTitle": true
     },
     "theses": {
-      "title": "Theses",
+      "title": "Directed Student Theses",
       "type": "list",
       "itemType": "thesis",
       "dataSource": "theses.json",
