@@ -362,4 +362,10 @@ a:hover {
   .entry-date {
     text-align: left;
   }
+
+  .entry-subtitle,
+  .entry-description,
+  .entry-date {
+    font-size: 14px;
+  }
 }

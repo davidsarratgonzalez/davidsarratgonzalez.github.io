@@ -21,7 +21,7 @@ function UniversalSection({ sectionConfig, data }) {
             const logoHeight = logoElement.offsetHeight;
             const contentHeight = contentElement.offsetHeight;
             const heightDifference = contentHeight - logoHeight;
-            const threshold = 20; // If content is only 20px taller than logo, center it
+            const threshold = 40; // If content is only 40px taller than logo, center it
             
             // Remove existing class
             entryRef.classList.remove('small-content');
