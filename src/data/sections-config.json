@@ -6,7 +6,7 @@
       "itemType": "personal",
       "dataSource": "about.json",
       "component": "About",
-      "enabled": true,
+      "enabled": false,
       "showTitle": true,
       "showInHeader": true,
       "showOnlyWithDescription": true
