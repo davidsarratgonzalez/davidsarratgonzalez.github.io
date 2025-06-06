@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdavidsarratgonzalez_github_io=self.webpackChunkdavidsarratgonzalez_github_io||[]).push([[280],{280:a=>{a.exports=JSON.parse('[{"name":"dsOMOP: A DataSHIELD Integration for OMOP CDM Databases","link":"https://isglobal-brge.github.io/dsOMOP","linkText":"Project Documentation","technologies":"R, DataSHIELD, OMOP CDM"}]')}}]);
