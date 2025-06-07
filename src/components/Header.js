@@ -34,9 +34,9 @@ function Header({ hideDownloadCV }) {
       text: aboutData.email
     },
     download: {
-      icon: 'fas fa-file-pdf',
+      icon: 'fas fa-download',
       url: '/download',
-      text: 'Download CV',
+      text: 'Download resume',
       target: '_blank',
       rel: 'noopener noreferrer'
     }
