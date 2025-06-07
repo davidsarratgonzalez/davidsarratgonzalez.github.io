@@ -1,8 +1,11 @@
 import React from 'react';
 import aboutData from '../data/about.json';
+import resumeConfig from '../data/resume-config.json';
 import OptimizedImage from './OptimizedImage';
 
-function Header() {
+function Header({ hideDownloadCV }) {
+  const showDownloadLink = (resumeConfig.settings?.showDownloadCV ?? true) && !hideDownloadCV;
+
   const socialLinks = {
     linkedin: {
       icon: 'fab fa-linkedin',
@@ -29,6 +32,13 @@ function Header() {
       icon: 'fas fa-envelope',
       url: `mailto:${aboutData.email}`,
       text: aboutData.email
+    },
+    download: {
+      icon: 'fas fa-file-pdf',
+      url: '/download',
+      text: 'Download CV',
+      target: '_blank',
+      rel: 'noopener noreferrer'
     }
   };
 
@@ -52,18 +62,23 @@ function Header() {
       <div className="header-right">
         <div className="social-links-container">
           <div className="social-links">
-            {Object.keys(aboutData).map((key) => {
-              if (socialLinks[key] && aboutData[key]) {
+            {Object.keys(socialLinks).map((key) => {
+              if (key === 'download' && !showDownloadLink) {
+                return null;
+              }
+
+              if (key === 'download' || (socialLinks[key] && aboutData[key])) {
+                const link = socialLinks[key];
                 return (
                   <a
                     key={key}
-                    href={socialLinks[key].url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={socialLinks[key].className || ''}
+                    href={link.url}
+                    target={link.target || '_blank'}
+                    rel={link.rel || 'noopener noreferrer'}
+                    className={link.className || ''}
                   >
-                    <i className={socialLinks[key].icon}></i>
-                    <span className="link-text">{socialLinks[key].text}</span>
+                    <i className={link.icon}></i>
+                    <span className="link-text">{link.text}</span>
                   </a>
                 );
               }

@@ -34,8 +34,8 @@ async function generatePDF() {
       deviceScaleFactor: 0.6
     });
 
-    // Navigate to the local development server or build
-    const url = process.env.PDF_URL || 'http://localhost:3000?pdf=true';
+    // Navigate to the local development server or build, using a hash to hide elements
+    const url = (process.env.PDF_URL || 'http://localhost:3000') + '#no-download';
     console.log(`📄 Loading page: ${url}`);
     
     await page.goto(url, { 
@@ -236,6 +236,33 @@ async function generatePDF() {
 
     console.log(`✅ PDF generated successfully: ${pdfPath}`);
     console.log(`📦 File size: ${(pdfBuffer.length / 1024 / 1024).toFixed(2)} MB`);
+    
+    // Create a download redirect page
+    const pdfFileName = path.basename(pdfPath);
+    const downloadPageContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/${pdfFileName}">
+  <title>Redirecting to CV...</title>
+  <script>
+    window.location.href = '/${pdfFileName}';
+  </script>
+</head>
+<body>
+  <p>
+    Downloading CV... If your download does not start automatically, 
+    <a href="/${pdfFileName}">click here</a>.
+  </p>
+</body>
+</html>`;
+
+    const downloadDir = path.join(buildDir, 'download');
+    await fs.mkdir(downloadDir, { recursive: true });
+    const downloadPagePath = path.join(downloadDir, 'index.html');
+    await fs.writeFile(downloadPagePath, downloadPageContent);
+
+    console.log(`✅ Created download redirect page: ${downloadPagePath}`);
     
     return pdfPath;
     

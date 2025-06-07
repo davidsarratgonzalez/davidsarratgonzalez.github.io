@@ -10,13 +10,26 @@ function App() {
   const [sectionsData, setSectionsData] = useState({});
   const [loading, setLoading] = useState(true);
   
-  // Detect PDF mode
-  const isPDFMode = new URLSearchParams(window.location.search).get('pdf') === 'true';
+  // Detect hash for special modes
+  const [hash, setHash] = useState(window.location.hash);
 
   useEffect(() => {
-    const title = isPDFMode ? `${aboutData.name} - Resume` : (resumeConfig.title || `${aboutData.name}`);
+    const handleHashChange = () => {
+      setHash(window.location.hash);
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+  
+  const hideDownloadCV = hash === '#no-download';
+
+  useEffect(() => {
+    const title = hideDownloadCV ? `${aboutData.name} - Resume` : (resumeConfig.title || `${aboutData.name}`);
     document.title = title;
-  }, [isPDFMode]);
+  }, [hideDownloadCV]);
 
   useEffect(() => {
     const loadSectionData = async () => {
@@ -69,8 +82,8 @@ function App() {
   };
 
   return (
-    <div className={`App ${isPDFMode ? 'pdf-mode' : ''}`}>
-      <Header />
+    <div className={`App ${hideDownloadCV ? 'pdf-mode' : ''}`}>
+      <Header hideDownloadCV={hideDownloadCV} />
       <main>
         {renderSections()}
       </main>

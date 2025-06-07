@@ -16,6 +16,7 @@
   "settings": {
     "showSectionNumbers": false,
     "compactMode": false,
-    "theme": "default"
+    "theme": "default",
+    "showDownloadCV": true
   }
 } 
