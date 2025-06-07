@@ -244,14 +244,14 @@ async function generatePDF() {
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url=/${pdfFileName}">
-  <title>Redirecting to CV...</title>
+  <title>Redirecting to resume...</title>
   <script>
     window.location.href = '/${pdfFileName}';
   </script>
 </head>
 <body>
   <p>
-    Downloading CV... If your download does not start automatically, 
+    Downloading resume... If your download does not start automatically, 
     <a href="/${pdfFileName}">click here</a>.
   </p>
 </body>
