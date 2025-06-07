@@ -34,7 +34,7 @@ function Header({ hideDownloadCV }) {
       text: aboutData.email
     },
     download: {
-      icon: 'fas fa-download',
+      icon: 'fas fa-file-pdf',
       url: '/download',
       text: 'Download resume',
       target: '_blank',
