@@ -1,6 +1,6 @@
 # My personal website
 
-This project showcases my professional experience, education, projects, publications, and more in a minimalistic and responsive design. The website is built using React and is optimized for both desktop and mobile devices.
+This project showcases my professional experience, education, publications, and more in a minimalistic and responsive design. The website is built using React and is optimized for both desktop and mobile devices. Feel free to [fork it](https://github.com/davidsarratgonzalez/davidsarratgonzalez.github.io/fork) and modify it to create your own personal website. 😊
 
 ## Features
 
@@ -11,7 +11,7 @@ This project showcases my professional experience, education, projects, publicat
 
 ## Demo
 
-You can view the live demo of the website [here](https://davidsarratgonzalez.github.io).
+You can view my own website [here](https://davidsarratgonzalez.github.io), which can act as a demo if you are planning to set up your own.
 
 ## Getting started
 
