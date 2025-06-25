@@ -3,7 +3,7 @@
     "authors": "David Sarrat-González, Xavier Escribà-Montagut, Jared Houghtaling, Juan R González",
     "month": "May",
     "year": "2025",
-    "title": "dsOMOP: Bridging OMOP CDM and DataSHIELD for Secure Federated Analysis of Standardized Clinical Data",
+    "title": "dsOMOP: bridging OMOP CDM and DataSHIELD for secure federated analysis of standardized clinical data",
     "journal": "Bioinformatics",
     "doi": "10.1093/bioinformatics/btaf286"
   },

@@ -11,11 +11,7 @@ function Publications() {
             <h3 className="entry-title">{pub.title}</h3>
             <p className="entry-subtitle">{pub.authors}</p>
             <p className="entry-subtitle">
-              <em>
-                {pub.journal === "Int J Sports Physiol Perform" 
-                  ? "International Journal of Sports Physiology and Performance" 
-                  : pub.journal}
-              </em>
+              <em>{pub.journal}</em>
             </p>
             {pub.doi && (
               <p className="entry-description left-aligned-link">
