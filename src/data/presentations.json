@@ -1,5 +1,15 @@
 [
   {
+    "title": "dsHPC: Enabling High-Performance Computing in DataSHIELD",
+    "event": "DataSHIELD Conference 2025",
+    "date": "Sep 2025"
+  },
+  {
+    "title": "dsOMOP: bridging OMOP CDM and DataSHIELD for secure federated analysis of standardized clinical data",
+    "event": "OHDSI Research Spotlight",
+    "date": "Jul 2025"
+  },
+  {
     "title": "Integrating OMOP CDM and OHDSI Tools in Federated Clinical Data Analysis Frameworks",
     "event": "Integraal Kankercentrum Nederland (IKNL) Seminar",
     "date": "Jan 2024"
