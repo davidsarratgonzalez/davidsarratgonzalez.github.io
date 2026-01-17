@@ -38,9 +38,9 @@ async function generatePDF() {
     const url = (process.env.PDF_URL || 'http://localhost:3000') + '#no-download';
     console.log(`📄 Loading page: ${url}`);
     
-    await page.goto(url, { 
+    await page.goto(url, {
       waitUntil: 'networkidle0',
-      timeout: 30000 
+      timeout: 60000
     });
 
     // Scroll gradually to trigger loading of all images

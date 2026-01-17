@@ -47,12 +47,39 @@ async function buildWithPDF() {
       shell: true
     });
 
-    // Wait for server to start and be ready
-    await new Promise((resolve) => {
-      setTimeout(resolve, 5000);
-    });
-    
-    console.log('🌐 Server should be ready at http://localhost:3000');
+    // Wait for server to be ready by polling
+    const maxAttempts = 30;
+    let serverReady = false;
+
+    for (let i = 0; i < maxAttempts; i++) {
+      try {
+        const http = require('http');
+        await new Promise((resolve, reject) => {
+          const req = http.get('http://localhost:3000', (res) => {
+            if (res.statusCode === 200) {
+              resolve();
+            } else {
+              reject(new Error(`Status ${res.statusCode}`));
+            }
+          });
+          req.on('error', reject);
+          req.setTimeout(2000, () => {
+            req.destroy();
+            reject(new Error('Timeout'));
+          });
+        });
+        serverReady = true;
+        break;
+      } catch (e) {
+        await new Promise(r => setTimeout(r, 1000));
+      }
+    }
+
+    if (!serverReady) {
+      throw new Error('Server failed to start after 30 seconds');
+    }
+
+    console.log('🌐 Server is ready at http://localhost:3000');
 
     // Step 4: Generate PDF
     console.log('📄 Generating PDF...');
