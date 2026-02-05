@@ -1,6 +1,6 @@
 import React from 'react';
 import aboutData from '../data/about.json';
-import resumeConfig from '../data/resume-config.json';
+import resumeConfig from '../config/resume-config.json';
 import OptimizedImage from './OptimizedImage';
 
 function Header({ hideDownloadCV }) {

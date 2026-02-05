@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import sectionTypes from '../data/section-types.json';
+import sectionTypes from '../config/section-types.json';
 import OptimizedImage from './OptimizedImage';
 import { getOrgKeyFromFilename } from '../utils/imageUtils';
 import { renderMarkdown } from '../utils/markdownUtils';

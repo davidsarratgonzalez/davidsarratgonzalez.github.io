@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import UniversalSection from './components/UniversalSection';
-import resumeConfig from './data/resume-config.json';
-import sectionsConfig from './data/sections-config.json';
+import resumeConfig from './config/resume-config.json';
+import sectionsConfig from './config/sections-config.json';
 import aboutData from './data/about.json';
+import { sortByDate } from './utils/dateUtils';
 
 function App() {
   const [sectionsData, setSectionsData] = useState({});
@@ -68,7 +69,27 @@ function App() {
       })
       .map(sectionKey => {
         const config = sectionsConfig.sections[sectionKey];
-        const data = sectionsData[sectionKey];
+        let data = sectionsData[sectionKey];
+
+        // Apply date sorting if configured
+        if (config.sortByDate && Array.isArray(data)) {
+          // Parse sortByDate config: true, "asc", "desc", or { order, field }
+          let sortOrder = 'desc';
+          let sortFields = ['date', 'month', 'startDate'];  // default priority
+
+          if (typeof config.sortByDate === 'string') {
+            sortOrder = config.sortByDate === 'asc' ? 'asc' : 'desc';
+          } else if (typeof config.sortByDate === 'object') {
+            sortOrder = config.sortByDate.order === 'asc' ? 'asc' : 'desc';
+            if (config.sortByDate.field) {
+              sortFields = Array.isArray(config.sortByDate.field)
+                ? config.sortByDate.field
+                : [config.sortByDate.field];
+            }
+          }
+
+          data = sortByDate(data, sortOrder, sortFields);
+        }
 
         return (
           <UniversalSection

@@ -38,7 +38,8 @@
       "dataSource": "publications.json",
       "component": "Publications",
       "enabled": true,
-      "showTitle": true
+      "showTitle": true,
+      "sortByDate": true
     },
     "presentations": {
       "title": "Presentations",
@@ -47,7 +48,8 @@
       "dataSource": "presentations.json",
       "component": "Presentations",
       "enabled": true,
-      "showTitle": true
+      "showTitle": true,
+      "sortByDate": true
     },
     "workshops": {
       "title": "Workshops",
@@ -56,7 +58,8 @@
       "dataSource": "workshops.json",
       "component": "Workshops",
       "enabled": true,
-      "showTitle": true
+      "showTitle": true,
+      "sortByDate": true
     },
     "posters": {
       "title": "Posters",
@@ -65,7 +68,8 @@
       "dataSource": "posters.json",
       "component": "Posters",
       "enabled": true,
-      "showTitle": true
+      "showTitle": true,
+      "sortByDate": true
     },
     "awards": {
       "title": "Awards",
@@ -74,7 +78,8 @@
       "dataSource": "awards.json",
       "component": "Awards",
       "enabled": true,
-      "showTitle": true
+      "showTitle": true,
+      "sortByDate": true
     },
     "volunteering": {
       "title": "Volunteering",
