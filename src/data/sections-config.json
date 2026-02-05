@@ -76,15 +76,6 @@
       "enabled": true,
       "showTitle": true
     },
-    "theses": {
-      "title": "Directed Student Theses",
-      "type": "list",
-      "itemType": "thesis",
-      "dataSource": "theses.json",
-      "component": "Theses",
-      "enabled": true,
-      "showTitle": true
-    },
     "awards": {
       "title": "Awards",
       "type": "list",
@@ -100,7 +91,7 @@
       "itemType": "volunteering",
       "dataSource": "volunteering.json",
       "component": "Volunteering",
-      "enabled": true,
+      "enabled": false,
       "showTitle": true,
       "hasLeftAlignedEntries": false
     }

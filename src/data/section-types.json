@@ -85,22 +85,6 @@
         "linkText": { "type": "string", "required": false }
       }
     },
-    "thesis": {
-      "displayLines": [
-        { "field": "title", "type": "title", "order": 1 },
-        { "field": "author", "type": "subtitle", "order": 2, "italic": true },
-        { "field": "degree", "type": "description", "order": 3 },
-        { "field": "uri", "type": "link", "order": 4, "label": "URI" }
-      ],
-      "dateFormat": "date",
-      "fields": {
-        "title": { "type": "string", "required": true },
-        "author": { "type": "string", "required": true },
-        "degree": { "type": "string", "required": true },
-        "date": { "type": "string", "required": true },
-        "uri": { "type": "string", "required": false }
-      }
-    },
     "presentation": {
       "displayLines": [
         { "field": "title", "type": "title", "order": 1 },
