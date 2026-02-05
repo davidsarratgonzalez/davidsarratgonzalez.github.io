@@ -51,23 +51,6 @@
         "doi": { "type": "string", "required": false }
       }
     },
-    "project": {
-      "displayLines": [
-        { "field": "name", "type": "title", "order": 1 },
-        { "field": "description", "type": "description", "order": 2, "markdown": true },
-        { "field": "technologies", "type": "subtitle", "order": 3, "prefix": "Technologies: " },
-        { "field": "link", "type": "link", "order": 4, "label": "Website", "customText": true }
-      ],
-      "dateFormat": "date",
-      "fields": {
-        "name": { "type": "string", "required": true },
-        "description": { "type": "string", "required": false },
-        "technologies": { "type": "string", "required": false },
-        "link": { "type": "string", "required": false },
-        "linkText": { "type": "string", "required": false },
-        "date": { "type": "string", "required": false }
-      }
-    },
     "award": {
       "displayLines": [
         { "field": "title", "type": "title", "order": 1 },

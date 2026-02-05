@@ -31,15 +31,6 @@
       "showTitle": true,
       "hasLeftAlignedEntries": true
     },
-    "projects": {
-      "title": "Projects",
-      "type": "list",
-      "itemType": "project",
-      "dataSource": "projects.json",
-      "component": "Projects",
-      "enabled": true,
-      "showTitle": true
-    },
     "publications": {
       "title": "Publications",
       "type": "list",
