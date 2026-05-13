@@ -1,6 +1,6 @@
 # My personal website
 
-This project showcases my professional experience, education, publications, and more in a minimalistic and responsive design. The website is built using React and is optimized for both desktop and mobile devices. Feel free to [fork it](https://github.com/davidsarratgonzalez/davidsarratgonzalez.github.io/fork) and modify it to create your own personal website. 😊
+This project showcases my professional experience, education, publications, and more in a minimalistic and responsive design. The website is built using React and is optimized for both desktop and mobile devices. Feel free to [fork it](https://github.com/davidsarrat/davidsarrat.github.io/fork) and modify it to create your own personal website. 😊
 
 ## Features
 
@@ -11,7 +11,7 @@ This project showcases my professional experience, education, publications, and 
 
 ## Demo
 
-You can view my own website [here](https://davidsarratgonzalez.github.io), which can act as a demo if you are planning to set up your own.
+You can view my own website [here](https://davidsarrat.github.io), which can act as a demo if you are planning to set up your own.
 
 ## Getting started
 
@@ -27,8 +27,8 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/davidsarratgonzalez/davidsarratgonzalez.github.io.git
-    cd davidsarratgonzalez.github.io
+    git clone https://github.com/davidsarrat/davidsarrat.github.io.git
+    cd davidsarrat.github.io
     ```
 
 2. Install the dependencies:

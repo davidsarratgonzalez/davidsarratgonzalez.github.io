@@ -34,7 +34,7 @@ async function generateFavicons() {
       appShortName: 'DSarrat',
       appDescription: 'Personal website and resume of David Sarrat González',
       developerName: 'David Sarrat González',
-      developerURL: 'https://davidsarratgonzalez.github.io',
+      developerURL: 'https://davidsarrat.github.io',
       dir: 'auto',
       lang: 'en-US',
       background: faviconConfig.background || '#ffffff',
@@ -203,4 +203,4 @@ if (require.main === module) {
   buildImages();
 }
 
-module.exports = { buildImages }; 
+module.exports = { buildImages };
