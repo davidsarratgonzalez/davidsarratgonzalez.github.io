@@ -1,5 +1,13 @@
 [
   {
+    "title": "dsFlower: privacy-preserving federated learning for biomedical data",
+    "event": "Flower AI Summit 2026",
+    "location": "London, UK",
+    "date": "Apr 2026",
+    "link": "https://youtu.be/6K3RGy8bKyE",
+    "linkText": "Recording"
+  },
+  {
     "title": "dsHPC: Enabling High-Performance Computing in DataSHIELD",
     "event": "DataSHIELD Conference 2025",
     "date": "Sep 2025"
